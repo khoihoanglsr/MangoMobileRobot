@@ -1,0 +1,22 @@
+{
+  "package_name": "robot_localization",
+  "output_dir": "/home/robomango/workspace/diffdrive_ws/build/robot_localization/rosidl_generator_type_description/robot_localization",
+  "idl_tuples": [
+    "/home/robomango/workspace/diffdrive_ws/build/robot_localization/rosidl_adapter/robot_localization:srv/FromLL.idl",
+    "/home/robomango/workspace/diffdrive_ws/build/robot_localization/rosidl_adapter/robot_localization:srv/GetState.idl",
+    "/home/robomango/workspace/diffdrive_ws/build/robot_localization/rosidl_adapter/robot_localization:srv/SetDatum.idl",
+    "/home/robomango/workspace/diffdrive_ws/build/robot_localization/rosidl_adapter/robot_localization:srv/SetPose.idl",
+    "/home/robomango/workspace/diffdrive_ws/build/robot_localization/rosidl_adapter/robot_localization:srv/SetUTMZone.idl",
+    "/home/robomango/workspace/diffdrive_ws/build/robot_localization/rosidl_adapter/robot_localization:srv/ToggleFilterProcessing.idl",
+    "/home/robomango/workspace/diffdrive_ws/build/robot_localization/rosidl_adapter/robot_localization:srv/ToLL.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "geographic_msgs:/opt/ros/jazzy/share/geographic_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "diagnostic_msgs:/opt/ros/jazzy/share/diagnostic_msgs"
+  ]
+}
