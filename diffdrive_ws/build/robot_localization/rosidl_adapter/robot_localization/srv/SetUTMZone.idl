@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from robot_localization/srv/SetUTMZone.srv
+// generated code does not contain a copyright notice
+
+
+module robot_localization {
+  module srv {
+    @verbatim (language="comment", text=
+      "Set an UTM zone navsat_transform should stick to." "\n"
+      "Example: 31U")
+    struct SetUTMZone_Request {
+      string utm_zone;
+    };
+    struct SetUTMZone_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

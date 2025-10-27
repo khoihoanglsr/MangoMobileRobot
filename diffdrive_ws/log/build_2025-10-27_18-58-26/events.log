@@ -1,0 +1,206 @@
+[0.000000] (-) TimerEvent: {}
+[0.001824] (-) JobUnselected: {'identifier': 'diffdrive_description'}
+[0.001904] (robot_localization) JobQueued: {'identifier': 'robot_localization', 'dependencies': OrderedDict()}
+[0.001935] (robot_localization) JobStarted: {'identifier': 'robot_localization'}
+[0.014271] (robot_localization) JobProgress: {'identifier': 'robot_localization', 'progress': 'cmake'}
+[0.014377] (robot_localization) Command: {'cmd': ['/usr/bin/cmake', '/home/robomango/workspace/diffdrive_ws/src/robot_localization', '-DCMAKE_BUILD_TYPE=RelWithDebInfo', '-DCMAKE_VERBOSE_MAKEFILE=ON', '-DCMAKE_INSTALL_PREFIX=/home/robomango/workspace/diffdrive_ws/install/robot_localization'], 'cwd': '/home/robomango/workspace/diffdrive_ws/build/robot_localization', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'USER': 'robomango', 'LC_TIME': 'en_GB.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/robomango/microros_ws/install/micro_ros_agent/lib:/home/robomango/microros_ws/install/micro_ros_msgs/lib:/home/robomango/microros_ws/install/drive_base_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robomango', 'OLDPWD': '/home/robomango/workspace/diffdrive_ws/src/robot_localization', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'SYSTEMD_EXEC_PID': '2293', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/robomango/Diffdrive_ws/install:/home/robomango/microros_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robomango', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'robomango', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/robomango/.local/bin:/opt/ros/jazzy/bin:/home/robomango/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/traixoai:@/tmp/.ICE-unix/2263,unix/traixoai:/tmp/.ICE-unix/2263', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/68ab7c1f_3a6b_4a77_a3f5_35c179ca55ce', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.AMLZE3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.153', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/robomango/microros_ws/install/micro_ros_setup:/home/robomango/microros_ws/install/micro_ros_agent:/home/robomango/microros_ws/install/micro_ros_msgs:/home/robomango/microros_ws/install/drive_base_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/robomango/workspace/diffdrive_ws/build/robot_localization', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robomango/microros_ws/install/micro_ros_msgs/lib/python3.12/site-packages:/home/robomango/microros_ws/install/drive_base_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/robomango/microros_ws/install/micro_ros_setup:/home/robomango/microros_ws/install/micro_ros_agent:/home/robomango/microros_ws/install/micro_ros_msgs:/home/robomango/microros_ws/install/drive_base_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099213] (-) TimerEvent: {}
+[0.102728] (robot_localization) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.191414] (robot_localization) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.199311] (-) TimerEvent: {}
+[0.224536] (robot_localization) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299473] (-) TimerEvent: {}
+[0.361231] (robot_localization) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.374151] (robot_localization) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.374515] (robot_localization) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.375076] (robot_localization) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.388451] (robot_localization) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.399595] (-) TimerEvent: {}
+[0.501153] (-) TimerEvent: {}
+[0.549184] (robot_localization) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.561933] (robot_localization) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.562343] (robot_localization) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.563005] (robot_localization) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.567047] (robot_localization) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.601275] (-) TimerEvent: {}
+[0.702839] (-) TimerEvent: {}
+[0.788941] (robot_localization) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.802958] (-) TimerEvent: {}
+[0.904456] (-) TimerEvent: {}
+[0.948115] (robot_localization) StdoutLine: {'line': b'-- Found angles: 1.16.0 (/opt/ros/jazzy/share/angles/cmake)\n'}
+[0.952593] (robot_localization) StdoutLine: {'line': b'-- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.004861] (-) TimerEvent: {}
+[1.014894] (robot_localization) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.038180] (robot_localization) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.062074] (robot_localization) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.089959] (robot_localization) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.104965] (-) TimerEvent: {}
+[1.205267] (-) TimerEvent: {}
+[1.215675] (robot_localization) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.223267] (robot_localization) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.305398] (-) TimerEvent: {}
+[1.347982] (robot_localization) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.382550] (robot_localization) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.405518] (-) TimerEvent: {}
+[1.420675] (robot_localization) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.505641] (-) TimerEvent: {}
+[1.534199] (robot_localization) StdoutLine: {'line': b'-- Found diagnostic_msgs: 5.3.6 (/opt/ros/jazzy/share/diagnostic_msgs/cmake)\n'}
+[1.590491] (robot_localization) StdoutLine: {'line': b'-- Found diagnostic_updater: 4.2.6 (/opt/ros/jazzy/share/diagnostic_updater/cmake)\n'}
+[1.603060] (robot_localization) StdoutLine: {'line': b'-- Found geographic_msgs: 1.0.6 (/opt/ros/jazzy/share/geographic_msgs/cmake)\n'}
+[1.605759] (-) TimerEvent: {}
+[1.693261] (robot_localization) StdoutLine: {'line': b'-- Found message_filters: 4.11.5 (/opt/ros/jazzy/share/message_filters/cmake)\n'}
+[1.701309] (robot_localization) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[1.705911] (-) TimerEvent: {}
+[1.745497] (robot_localization) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.766774] (robot_localization) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.771291] (robot_localization) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.806019] (-) TimerEvent: {}
+[1.808004] (robot_localization) StdoutLine: {'line': b'-- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)\n'}
+[1.841549] (robot_localization) StdoutLine: {'line': b'-- Found tf2: 0.36.9 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[1.848966] (robot_localization) StdoutLine: {'line': b'-- Found tf2_eigen: 0.36.9 (/opt/ros/jazzy/share/tf2_eigen/cmake)\n'}
+[1.907167] (-) TimerEvent: {}
+[2.007453] (-) TimerEvent: {}
+[2.043868] (robot_localization) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.9 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[2.057900] (robot_localization) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[2.059604] (robot_localization) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[2.059817] (robot_localization) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.074727] (robot_localization) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  \n'}
+[2.078021] (robot_localization) StdoutLine: {'line': b'-- Found yaml_cpp_vendor: 9.0.1 (/opt/ros/jazzy/share/yaml_cpp_vendor/cmake)\n'}
+[2.078215] (robot_localization) StdoutLine: {'line': b"-- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'\n"}
+[2.084601] (robot_localization) StdoutLine: {'line': b'-- Found GeographicLib: /usr/lib/x86_64-linux-gnu  \n'}
+[2.107587] (-) TimerEvent: {}
+[2.211004] (-) TimerEvent: {}
+[2.311277] (-) TimerEvent: {}
+[2.411499] (-) TimerEvent: {}
+[2.511726] (-) TimerEvent: {}
+[2.612768] (-) TimerEvent: {}
+[2.713072] (-) TimerEvent: {}
+[2.813818] (-) TimerEvent: {}
+[2.915844] (-) TimerEvent: {}
+[3.016120] (-) TimerEvent: {}
+[3.108351] (robot_localization) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_cppcheck/cmake)\n'}
+[3.112452] (robot_localization) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_cpplint/cmake)\n'}
+[3.116236] (-) TimerEvent: {}
+[3.116655] (robot_localization) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_uncrustify/cmake)\n'}
+[3.121129] (robot_localization) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[3.216323] (-) TimerEvent: {}
+[3.317868] (-) TimerEvent: {}
+[3.419449] (-) TimerEvent: {}
+[3.519680] (-) TimerEvent: {}
+[3.619937] (-) TimerEvent: {}
+[3.720213] (-) TimerEvent: {}
+[3.820589] (-) TimerEvent: {}
+[3.921053] (-) TimerEvent: {}
+[4.022839] (-) TimerEvent: {}
+[4.124851] (-) TimerEvent: {}
+[4.225144] (-) TimerEvent: {}
+[4.327873] (-) TimerEvent: {}
+[4.428185] (-) TimerEvent: {}
+[4.509668] (robot_localization) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.528300] (-) TimerEvent: {}
+[4.628569] (-) TimerEvent: {}
+[4.729895] (-) TimerEvent: {}
+[4.830151] (-) TimerEvent: {}
+[4.930436] (-) TimerEvent: {}
+[5.030700] (-) TimerEvent: {}
+[5.058935] (robot_localization) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.065628] (robot_localization) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[5.130837] (-) TimerEvent: {}
+[5.231499] (-) TimerEvent: {}
+[5.272246] (robot_localization) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[5.331627] (-) TimerEvent: {}
+[5.431892] (-) TimerEvent: {}
+[5.532190] (-) TimerEvent: {}
+[5.632456] (-) TimerEvent: {}
+[5.732708] (-) TimerEvent: {}
+[5.832924] (-) TimerEvent: {}
+[5.921365] (robot_localization) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[5.933050] (-) TimerEvent: {}
+[6.033308] (-) TimerEvent: {}
+[6.037113] (robot_localization) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_flake8/cmake)\n'}
+[6.042031] (robot_localization) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_pep257/cmake)\n'}
+[6.049907] (robot_localization) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:102 (target_link_libraries):\n'}
+[6.050175] (robot_localization) StderrLine: {'line': b'  The plain signature for target_link_libraries has already been used with\n'}
+[6.050298] (robot_localization) StderrLine: {'line': b'  the target "rl_lib".  All uses of target_link_libraries with a target must\n'}
+[6.050398] (robot_localization) StderrLine: {'line': b'  be either all-keyword or all-plain.\n'}
+[6.050500] (robot_localization) StderrLine: {'line': b'\n'}
+[6.050624] (robot_localization) StderrLine: {'line': b'  The uses of the plain signature are here:\n'}
+[6.050850] (robot_localization) StderrLine: {'line': b'\n'}
+[6.050973] (robot_localization) StderrLine: {'line': b'   * CMakeLists.txt:80 (target_link_libraries)\n'}
+[6.051111] (robot_localization) StderrLine: {'line': b'\n'}
+[6.051216] (robot_localization) StderrLine: {'line': b'\n'}
+[6.051318] (robot_localization) StderrLine: {'line': b'\x1b[0m\n'}
+[6.059749] (robot_localization) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:146 (target_link_libraries):\n'}
+[6.059924] (robot_localization) StderrLine: {'line': b'  The keyword signature for target_link_libraries has already been used with\n'}
+[6.060012] (robot_localization) StderrLine: {'line': b'  the target "rl_lib".  All uses of target_link_libraries with a target must\n'}
+[6.060094] (robot_localization) StderrLine: {'line': b'  be either all-keyword or all-plain.\n'}
+[6.060173] (robot_localization) StderrLine: {'line': b'\n'}
+[6.060250] (robot_localization) StderrLine: {'line': b'  The uses of the keyword signature are here:\n'}
+[6.060336] (robot_localization) StderrLine: {'line': b'\n'}
+[6.060412] (robot_localization) StderrLine: {'line': b'   * CMakeLists.txt:102 (target_link_libraries)\n'}
+[6.060489] (robot_localization) StderrLine: {'line': b'\n'}
+[6.060566] (robot_localization) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.060641] (robot_localization) StderrLine: {'line': b'  CMakeLists.txt:110 (ament_target_dependencies)\n'}
+[6.060730] (robot_localization) StderrLine: {'line': b'\n'}
+[6.060811] (robot_localization) StderrLine: {'line': b'\x1b[0m\n'}
+[6.065793] (robot_localization) StdoutLine: {'line': b'-- Found ament_cmake_lint_cmake: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_lint_cmake/cmake)\n'}
+[6.069727] (robot_localization) StdoutLine: {'line': b'-- Found launch_testing_ament_cmake: 3.4.4 (/opt/ros/jazzy/share/launch_testing_ament_cmake/cmake)\n'}
+[6.073789] (robot_localization) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[6.077967] (robot_localization) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[6.133438] (-) TimerEvent: {}
+[6.208306] (robot_localization) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[6.210251] (robot_localization) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[6.227141] (robot_localization) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:251 (target_link_libraries):\n'}
+[6.227344] (robot_localization) StderrLine: {'line': b'  The plain signature for target_link_libraries has already been used with\n'}
+[6.227471] (robot_localization) StderrLine: {'line': b'  the target "ekf_node".  All uses of target_link_libraries with a target\n'}
+[6.227575] (robot_localization) StderrLine: {'line': b'  must be either all-keyword or all-plain.\n'}
+[6.227670] (robot_localization) StderrLine: {'line': b'\n'}
+[6.229222] (robot_localization) StderrLine: {'line': b'  The uses of the plain signature are here:\n'}
+[6.229360] (robot_localization) StderrLine: {'line': b'\n'}
+[6.229453] (robot_localization) StderrLine: {'line': b'   * CMakeLists.txt:130 (target_link_libraries)\n'}
+[6.229662] (robot_localization) StderrLine: {'line': b'   * /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:146 (target_link_libraries)\n'}
+[6.229770] (robot_localization) StderrLine: {'line': b'\n'}
+[6.229852] (robot_localization) StderrLine: {'line': b'\n'}
+[6.229929] (robot_localization) StderrLine: {'line': b'\x1b[0m\n'}
+[6.230006] (robot_localization) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:252 (target_link_libraries):\n'}
+[6.230084] (robot_localization) StderrLine: {'line': b'  The plain signature for target_link_libraries has already been used with\n'}
+[6.230162] (robot_localization) StderrLine: {'line': b'  the target "ukf_node".  All uses of target_link_libraries with a target\n'}
+[6.230237] (robot_localization) StderrLine: {'line': b'  must be either all-keyword or all-plain.\n'}
+[6.230314] (robot_localization) StderrLine: {'line': b'\n'}
+[6.230390] (robot_localization) StderrLine: {'line': b'  The uses of the plain signature are here:\n'}
+[6.230484] (robot_localization) StderrLine: {'line': b'\n'}
+[6.230560] (robot_localization) StderrLine: {'line': b'   * CMakeLists.txt:140 (target_link_libraries)\n'}
+[6.230637] (robot_localization) StderrLine: {'line': b'   * /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:146 (target_link_libraries)\n'}
+[6.230730] (robot_localization) StderrLine: {'line': b'\n'}
+[6.230813] (robot_localization) StderrLine: {'line': b'\n'}
+[6.230890] (robot_localization) StderrLine: {'line': b'\x1b[0m\n'}
+[6.230966] (robot_localization) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:253 (target_link_libraries):\n'}
+[6.231042] (robot_localization) StderrLine: {'line': b'  The plain signature for target_link_libraries has already been used with\n'}
+[6.231118] (robot_localization) StderrLine: {'line': b'  the target "navsat_transform_node".  All uses of target_link_libraries with\n'}
+[6.231194] (robot_localization) StderrLine: {'line': b'  a target must be either all-keyword or all-plain.\n'}
+[6.231269] (robot_localization) StderrLine: {'line': b'\n'}
+[6.231348] (robot_localization) StderrLine: {'line': b'  The uses of the plain signature are here:\n'}
+[6.231426] (robot_localization) StderrLine: {'line': b'\n'}
+[6.231504] (robot_localization) StderrLine: {'line': b'   * CMakeLists.txt:150 (target_link_libraries)\n'}
+[6.231581] (robot_localization) StderrLine: {'line': b'   * /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:146 (target_link_libraries)\n'}
+[6.231666] (robot_localization) StderrLine: {'line': b'\n'}
+[6.231813] (robot_localization) StderrLine: {'line': b'\n'}
+[6.231894] (robot_localization) StderrLine: {'line': b'\x1b[0m\n'}
+[6.231971] (robot_localization) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:254 (target_link_libraries):\n'}
+[6.232047] (robot_localization) StderrLine: {'line': b'  The plain signature for target_link_libraries has already been used with\n'}
+[6.232124] (robot_localization) StderrLine: {'line': b'  the target "robot_localization_listener_node".  All uses of\n'}
+[6.232206] (robot_localization) StderrLine: {'line': b'  target_link_libraries with a target must be either all-keyword or\n'}
+[6.232283] (robot_localization) StderrLine: {'line': b'  all-plain.\n'}
+[6.232359] (robot_localization) StderrLine: {'line': b'\n'}
+[6.232435] (robot_localization) StderrLine: {'line': b'  The uses of the plain signature are here:\n'}
+[6.232511] (robot_localization) StderrLine: {'line': b'\n'}
+[6.232586] (robot_localization) StderrLine: {'line': b'   * CMakeLists.txt:160 (target_link_libraries)\n'}
+[6.232661] (robot_localization) StderrLine: {'line': b'   * /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:146 (target_link_libraries)\n'}
+[6.233248] (robot_localization) StderrLine: {'line': b'\n'}
+[6.233327] (robot_localization) StderrLine: {'line': b'\n'}
+[6.233404] (robot_localization) StderrLine: {'line': b'\x1b[0m\n'}
+[6.233480] (-) TimerEvent: {}
+[6.253664] (robot_localization) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[6.275368] (robot_localization) CommandEnded: {'returncode': 1}
+[6.322316] (robot_localization) JobEnded: {'identifier': 'robot_localization', 'rc': 1}
+[6.332956] (-) EventReactorShutdown: {}
