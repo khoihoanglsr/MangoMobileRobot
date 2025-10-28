@@ -1,0 +1,1 @@
+/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description/ament_cmake_environment_hooks/local_setup.bash

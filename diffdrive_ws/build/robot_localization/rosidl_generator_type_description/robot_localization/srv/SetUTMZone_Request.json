@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robot_localization/srv/SetUTMZone_Request",
+      "fields": [
+        {
+          "name": "utm_zone",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "robot_localization/srv/SetUTMZone_Request",
+      "hash_string": "RIHS01_481afa24568fc140a35991b15553f3194e5f80a523e4af7c45b5c613beeeead5"
+    }
+  ]
+}

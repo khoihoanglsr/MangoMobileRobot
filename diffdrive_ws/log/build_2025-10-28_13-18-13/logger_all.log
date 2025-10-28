@@ -1,0 +1,225 @@
+[0.153s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.153s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x77173baa1280>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77173baa0f20>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77173baa0f20>>, mixin_verb=('build',))
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.207s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_description) by extension 'ros'
+[0.246s] DEBUG:colcon.colcon_core.package_identification:Package 'src/diffdrive_description' with type 'ros.ament_cmake' and name 'diffdrive_description'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'ros'
+[0.249s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_localization' with type 'ros.ament_cmake' and name 'robot_localization'
+[0.249s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.249s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.249s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.249s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.249s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.275s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install
+[0.276s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/robomango/workspace/MangoMobileRobot/install
+[0.276s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/robomango/microros_ws/install
+[0.279s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 289 installed packages in /opt/ros/jazzy
+[0.280s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_args' from command line to 'None'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_target' from command line to 'None'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.340s] DEBUG:colcon.colcon_core.verb:Building package 'robot_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization', 'merge_install': False, 'path': '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/robot_localization', 'symlink_install': True, 'test_result_base': None}
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'cmake_args' from command line to 'None'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'cmake_target' from command line to 'None'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.341s] DEBUG:colcon.colcon_core.verb:Building package 'diffdrive_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description', 'merge_install': False, 'path': '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/diffdrive_description', 'symlink_install': True, 'test_result_base': None}
+[0.341s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.342s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.342s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/robot_localization' with build type 'ament_cmake'
+[0.342s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/robot_localization'
+[0.345s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.346s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.346s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.369s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/robot_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization
+[7.122s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/robot_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization
+[7.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization -- -j2 -l2
+[473.713s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization -- -j2 -l2
+[473.727s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization
+[476.542s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_localization)
+[476.545s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization
+[476.547s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization' for CMake module files
+[476.549s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization' for CMake config files
+[476.549s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'cmake_prefix_path')
+[476.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.ps1'
+[476.551s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.dsv'
+[476.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.sh'
+[476.553s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib'
+[476.553s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'ld_library_path_lib')
+[476.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.ps1'
+[476.554s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.dsv'
+[476.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.sh'
+[476.555s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/bin'
+[476.555s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/pkgconfig/robot_localization.pc'
+[476.555s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages'
+[476.556s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'pythonpath')
+[476.556s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/pythonpath.ps1'
+[476.556s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/pythonpath.dsv'
+[476.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/pythonpath.sh'
+[476.557s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/bin'
+[476.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.ps1'
+[476.559s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.dsv'
+[476.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.sh'
+[476.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.bash'
+[476.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.zsh'
+[476.561s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/colcon-core/packages/robot_localization)
+[476.562s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_localization)
+[476.562s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization' for CMake module files
+[476.563s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization' for CMake config files
+[476.564s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'cmake_prefix_path')
+[476.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.ps1'
+[476.565s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.dsv'
+[476.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.sh'
+[476.566s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib'
+[476.566s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'ld_library_path_lib')
+[476.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.ps1'
+[476.567s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.dsv'
+[476.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.sh'
+[476.568s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/bin'
+[476.568s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/pkgconfig/robot_localization.pc'
+[476.568s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages'
+[476.568s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'pythonpath')
+[476.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/pythonpath.ps1'
+[476.569s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/pythonpath.dsv'
+[476.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/hook/pythonpath.sh'
+[476.570s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/bin'
+[476.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.ps1'
+[476.571s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.dsv'
+[476.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.sh'
+[476.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.bash'
+[476.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.zsh'
+[476.573s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/colcon-core/packages/robot_localization)
+[476.573s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/diffdrive_description' with build type 'ament_cmake'
+[476.575s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/diffdrive_description'
+[476.575s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[476.575s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[476.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description': AMENT_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/diffdrive_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description
+[477.686s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description' returned '0': AMENT_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/src/diffdrive_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description
+[477.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description': AMENT_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description -- -j2 -l2
+[477.746s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description' returned '0': AMENT_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description -- -j2 -l2
+[477.749s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description': AMENT_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description
+[478.046s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diffdrive_description)
+[478.046s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description' for CMake module files
+[478.047s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description' for CMake config files
+[478.048s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description' returned '0': AMENT_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description
+[478.048s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_description', 'cmake_prefix_path')
+[478.049s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/hook/cmake_prefix_path.ps1'
+[478.050s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/hook/cmake_prefix_path.dsv'
+[478.050s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/hook/cmake_prefix_path.sh'
+[478.051s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/bin'
+[478.051s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/lib/pkgconfig/diffdrive_description.pc'
+[478.051s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/lib/python3.12/site-packages'
+[478.052s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/bin'
+[478.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.ps1'
+[478.053s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.dsv'
+[478.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.sh'
+[478.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.bash'
+[478.055s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.zsh'
+[478.055s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/colcon-core/packages/diffdrive_description)
+[478.056s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diffdrive_description)
+[478.056s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description' for CMake module files
+[478.057s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description' for CMake config files
+[478.057s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_description', 'cmake_prefix_path')
+[478.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/hook/cmake_prefix_path.ps1'
+[478.058s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/hook/cmake_prefix_path.dsv'
+[478.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/hook/cmake_prefix_path.sh'
+[478.059s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/bin'
+[478.060s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/lib/pkgconfig/diffdrive_description.pc'
+[478.060s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/lib/python3.12/site-packages'
+[478.060s] Level 1:colcon.colcon_core.environment:checking '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/bin'
+[478.061s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.ps1'
+[478.061s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.dsv'
+[478.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.sh'
+[478.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.bash'
+[478.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/diffdrive_description/package.zsh'
+[478.063s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/diffdrive_description/share/colcon-core/packages/diffdrive_description)
+[478.063s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[478.064s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[478.064s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[478.064s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[478.076s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[478.076s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[478.077s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[478.103s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[478.103s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/local_setup.ps1'
+[478.105s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/_local_setup_util_ps1.py'
+[478.106s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/setup.ps1'
+[478.108s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/local_setup.sh'
+[478.108s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/_local_setup_util_sh.py'
+[478.109s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/setup.sh'
+[478.112s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/local_setup.bash'
+[478.112s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/setup.bash'
+[478.114s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/local_setup.zsh'
+[478.115s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/setup.zsh'
