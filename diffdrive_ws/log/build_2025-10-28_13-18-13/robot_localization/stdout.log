@@ -1,0 +1,546 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- robot_localization: You did not request a specific build type: selecting 'RelWithDebInfo'.
+-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found angles: 1.16.0 (/opt/ros/jazzy/share/angles/cmake)
+-- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found diagnostic_msgs: 5.3.6 (/opt/ros/jazzy/share/diagnostic_msgs/cmake)
+-- Found diagnostic_updater: 4.2.6 (/opt/ros/jazzy/share/diagnostic_updater/cmake)
+-- Found geographic_msgs: 1.0.6 (/opt/ros/jazzy/share/geographic_msgs/cmake)
+-- Found message_filters: 4.11.5 (/opt/ros/jazzy/share/message_filters/cmake)
+-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+-- Found tf2: 0.36.9 (/opt/ros/jazzy/share/tf2/cmake)
+-- Found tf2_eigen: 0.36.9 (/opt/ros/jazzy/share/tf2_eigen/cmake)
+-- Found tf2_geometry_msgs: 0.36.9 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+-- Found yaml_cpp_vendor: 9.0.1 (/opt/ros/jazzy/share/yaml_cpp_vendor/cmake)
+-- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+-- Found GeographicLib: /usr/lib/x86_64-linux-gnu  
+-- Found ament_cmake_cppcheck: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_cppcheck/cmake)
+-- Found ament_cmake_cpplint: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_cpplint/cmake)
+-- Found ament_cmake_uncrustify: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_uncrustify/cmake)
+-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found PythonExtra: /usr/bin/python3  
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+-- Found ament_cmake_flake8: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_flake8/cmake)
+-- Found ament_cmake_pep257: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_pep257/cmake)
+-- Found ament_cmake_lint_cmake: 0.17.2 (/opt/ros/jazzy/share/ament_cmake_lint_cmake/cmake)
+-- Found launch_testing_ament_cmake: 3.4.4 (/opt/ros/jazzy/share/launch_testing_ament_cmake/cmake)
+-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done (6.4s)
+-- Generating done (0.2s)
+-- Build files have been written to: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization
+[  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[  1%] Built target ament_cmake_python_symlink_robot_localization
+[  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[  2%] Built target robot_localization__rosidl_generator_type_description
+[  3%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[  3%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[  3%] Built target gtest_main
+[  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  4%] Built target robot_localization__cpp
+[  4%] [34m[1mGenerating C code for ROS interfaces[0m
+[  5%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/from_ll__description.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/from_ll__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/from_ll__type_support.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/get_state__description.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/get_state__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/get_state__type_support.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_datum__description.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_datum__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_datum__type_support.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_pose__description.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_pose__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_pose__type_support.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_utm_zone__description.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_utm_zone__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_utm_zone__type_support.c.o[0m
+[ 16%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/toggle_filter_processing__description.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/toggle_filter_processing__functions.c.o[0m
+[ 18%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/toggle_filter_processing__type_support.c.o[0m
+[ 18%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/to_ll__description.c.o[0m
+[ 19%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/to_ll__functions.c.o[0m
+[ 20%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/to_ll__type_support.c.o[0m
+[ 21%] [32m[1mLinking C shared library librobot_localization__rosidl_generator_c.so[0m
+[ 21%] Built target robot_localization__rosidl_generator_c
+running egg_info
+creating robot_localization.egg-info
+writing robot_localization.egg-info/PKG-INFO
+writing dependency_links to robot_localization.egg-info/dependency_links.txt
+writing top-level names to robot_localization.egg-info/top_level.txt
+writing manifest file 'robot_localization.egg-info/SOURCES.txt'
+reading manifest file 'robot_localization.egg-info/SOURCES.txt'
+writing manifest file 'robot_localization.egg-info/SOURCES.txt'
+[ 21%] Built target ament_cmake_python_build_robot_localization_egg
+[ 22%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/from_ll__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/get_state__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/set_datum__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/set_pose__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/set_utm_zone__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/toggle_filter_processing__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/to_ll__type_support.cpp.o[0m
+[ 27%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_cpp.so[0m
+[ 27%] Built target robot_localization__rosidl_typesupport_cpp
+[ 28%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 28%] Built target gtest
+[ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/from_ll__type_support_c.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/get_state__type_support_c.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/set_datum__type_support_c.cpp.o[0m
+[ 32%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/set_pose__type_support_c.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/from_ll__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/set_utm_zone__type_support_c.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/get_state__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/toggle_filter_processing__type_support_c.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/set_datum__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/to_ll__type_support_c.cpp.o[0m
+[ 38%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_fastrtps_c.so[0m
+[ 38%] Built target robot_localization__rosidl_typesupport_fastrtps_c
+[ 39%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/set_pose__type_support.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/set_utm_zone__type_support.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/toggle_filter_processing__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/to_ll__type_support.cpp.o[0m
+[ 42%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 42%] Built target robot_localization__rosidl_typesupport_fastrtps_cpp
+[ 42%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 43%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/from_ll__type_support.c.o[0m
+[ 44%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/get_state__type_support.c.o[0m
+[ 45%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/set_datum__type_support.c.o[0m
+[ 45%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/set_pose__type_support.c.o[0m
+[ 46%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/set_utm_zone__type_support.c.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/toggle_filter_processing__type_support.c.o[0m
+[ 48%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/to_ll__type_support.c.o[0m
+[ 48%] [32m[1mLinking C shared library librobot_localization__rosidl_typesupport_introspection_c.so[0m
+[ 48%] Built target robot_localization__rosidl_typesupport_introspection_c
+[ 49%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/from_ll__type_support.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/get_state__type_support.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/set_datum__type_support.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/set_pose__type_support.cpp.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/set_utm_zone__type_support.cpp.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/toggle_filter_processing__type_support.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/to_ll__type_support.cpp.o[0m
+[ 55%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_c.so[0m
+[ 55%] Built target robot_localization__rosidl_typesupport_c
+[ 56%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/from_ll__type_support.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/get_state__type_support.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/set_datum__type_support.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/set_pose__type_support.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/set_utm_zone__type_support.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/toggle_filter_processing__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/to_ll__type_support.cpp.o[0m
+[ 62%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_introspection_cpp.so[0m
+[ 62%] Built target robot_localization__rosidl_typesupport_introspection_cpp
+[ 63%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ekf.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ukf.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/filter_base.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/filter_utilities.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/navsat_transform.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/robot_localization_estimator.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ros_filter.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ros_filter_utilities.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ros_robot_localization_listener.cpp.o[0m
+[ 69%] [32m[1mLinking CXX shared library librl_lib.so[0m
+[ 69%] Built target rl_lib
+[ 69%] Built target robot_localization
+[ 69%] [32mBuilding CXX object CMakeFiles/ekf_node.dir/src/ekf_node.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/ukf_node.dir/src/ukf_node.cpp.o[0m
+[ 71%] [32m[1mLinking CXX executable ekf_node[0m
+[ 71%] Built target ekf_node
+[ 72%] [32m[1mLinking CXX executable ukf_node[0m
+[ 72%] Built target ukf_node
+[ 73%] [32mBuilding CXX object CMakeFiles/navsat_transform_node.dir/src/navsat_transform_node.cpp.o[0m
+[ 74%] [32m[1mLinking CXX executable navsat_transform_node[0m
+[ 74%] Built target navsat_transform_node
+[ 75%] [32mBuilding CXX object CMakeFiles/robot_localization_listener_node.dir/src/robot_localization_listener_node.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable robot_localization_listener_node[0m
+[ 75%] Built target robot_localization_listener_node
+[ 76%] [32mBuilding CXX object CMakeFiles/filter_base-test.dir/test/test_filter_base.cpp.o[0m
+[ 76%] [32m[1mLinking CXX executable filter_base-test[0m
+[ 76%] Built target filter_base-test
+[ 76%] [32mBuilding CXX object CMakeFiles/test_filter_base_diagnostics_timestamps.dir/test/test_filter_base_diagnostics_timestamps.cpp.o[0m
+[ 77%] [32m[1mLinking CXX executable test_filter_base_diagnostics_timestamps[0m
+[ 77%] Built target test_filter_base_diagnostics_timestamps
+[ 78%] [32mBuilding CXX object CMakeFiles/test_ekf.dir/test/test_ekf.cpp.o[0m
+[ 78%] [32m[1mLinking CXX executable test_ekf[0m
+[ 78%] Built target test_ekf
+[ 79%] [32mBuilding CXX object CMakeFiles/test_ekf_node_interfaces.dir/test/test_se_node_interfaces.cpp.o[0m
+[ 80%] [32m[1mLinking CXX executable test_ekf_node_interfaces[0m
+[ 80%] Built target test_ekf_node_interfaces
+[ 81%] [32mBuilding CXX object CMakeFiles/test_ukf.dir/test/test_ukf.cpp.o[0m
+[ 82%] [32m[1mLinking CXX executable test_ukf[0m
+[ 82%] Built target test_ukf
+[ 82%] [32mBuilding CXX object CMakeFiles/test_ukf_node_interfaces.dir/test/test_se_node_interfaces.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/test_robot_localization_estimator.dir/test/test_robot_localization_estimator.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable test_robot_localization_estimator[0m
+[ 83%] Built target test_robot_localization_estimator
+[ 84%] [32mBuilding CXX object CMakeFiles/test_navsat_conversions.dir/test/test_navsat_conversions.cpp.o[0m
+[ 85%] [32m[1mLinking CXX executable test_navsat_conversions[0m
+[ 85%] Built target test_navsat_conversions
+[ 86%] [32mBuilding CXX object CMakeFiles/test_ros_robot_localization_listener.dir/test/test_ros_robot_localization_listener.cpp.o[0m
+[ 87%] [32m[1mLinking CXX executable test_ukf_node_interfaces[0m
+[ 87%] Built target test_ukf_node_interfaces
+[ 87%] [32mBuilding CXX object CMakeFiles/test_ros_robot_localization_listener_publisher.dir/test/test_ros_robot_localization_listener_publisher.cpp.o[0m
+[ 88%] [32m[1mLinking CXX executable test_ros_robot_localization_listener[0m
+[ 88%] Built target test_ros_robot_localization_listener
+[ 89%] [32m[1mLinking CXX executable test_ros_robot_localization_listener_publisher[0m
+[ 89%] Built target test_ros_robot_localization_listener_publisher
+[ 90%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 90%] Built target robot_localization__py
+[ 90%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_py.dir/rosidl_generator_py/robot_localization/srv/_from_ll_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_py.dir/rosidl_generator_py/robot_localization/srv/_get_state_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_py.dir/rosidl_generator_py/robot_localization/srv/_set_datum_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_py.dir/rosidl_generator_py/robot_localization/srv/_set_pose_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_py.dir/rosidl_generator_py/robot_localization/srv/_set_utm_zone_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_py.dir/rosidl_generator_py/robot_localization/srv/_toggle_filter_processing_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_py.dir/rosidl_generator_py/robot_localization/srv/_to_ll_s.c.o[0m
+[ 95%] [32m[1mLinking C shared library librobot_localization__rosidl_generator_py.so[0m
+[ 95%] Built target robot_localization__rosidl_generator_py
+[ 96%] [32mBuilding C object CMakeFiles/robot_localization_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/robot_localization/_robot_localization_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 96%] [32m[1mLinking C shared module rosidl_generator_py/robot_localization/robot_localization_s__rosidl_typesupport_fastrtps_c.so[0m
+[ 96%] Built target robot_localization_s__rosidl_typesupport_fastrtps_c
+[ 97%] [32mBuilding C object CMakeFiles/robot_localization_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/robot_localization/_robot_localization_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 98%] [32m[1mLinking C shared module rosidl_generator_py/robot_localization/robot_localization_s__rosidl_typesupport_introspection_c.so[0m
+[ 98%] Built target robot_localization_s__rosidl_typesupport_introspection_c
+[ 99%] [32mBuilding C object CMakeFiles/robot_localization_s__rosidl_typesupport_c.dir/rosidl_generator_py/robot_localization/_robot_localization_s.ep.rosidl_typesupport_c.c.o[0m
+[100%] [32m[1mLinking C shared module rosidl_generator_py/robot_localization/robot_localization_s__rosidl_typesupport_c.so[0m
+[100%] Built target robot_localization_s__rosidl_typesupport_c
+-- Install configuration: "RelWithDebInfo"
+-- Execute custom install script
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/ament_index/resource_index/rosidl_interfaces/robot_localization
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/FromLL.json
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/GetState.json
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetDatum.json
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetPose.json
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetUTMZone.json
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/ToggleFilterProcessing.json
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/ToLL.json
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/msg/rosidl_generator_c__visibility_control.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__functions.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__struct.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__type_support.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__functions.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__struct.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__type_support.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__functions.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__struct.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__type_support.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__functions.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__struct.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__type_support.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__functions.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__struct.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__type_support.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__functions.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__struct.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__type_support.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__functions.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__struct.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__type_support.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/from_ll.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/get_state.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/set_datum.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/set_pose.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/set_utm_zone.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/to_ll.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/toggle_filter_processing.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/environment/library_path.sh
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/environment/library_path.dsv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__builder.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__struct.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__traits.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__type_support.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__builder.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__struct.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__traits.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__type_support.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__builder.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__struct.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__traits.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__type_support.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__builder.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__struct.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__traits.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__type_support.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__builder.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__struct.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__traits.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__type_support.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__builder.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__struct.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__traits.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__type_support.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__builder.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__struct.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__traits.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__type_support.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/from_ll.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/get_state.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/set_datum.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/set_pose.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/set_utm_zone.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/to_ll.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/toggle_filter_processing.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/from_ll__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/get_state__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_datum__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/set_utm_zone__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/to_ll__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/srv/detail/toggle_filter_processing__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/environment/pythonpath.sh
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/environment/pythonpath.dsv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization-3.6.0-py3.12.egg-info/PKG-INFO
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization-3.6.0-py3.12.egg-info/SOURCES.txt
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization-3.6.0-py3.12.egg-info/dependency_links.txt
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization-3.6.0-py3.12.egg-info/top_level.txt
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/__init__.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/_robot_localization_s.ep.rosidl_typesupport_c.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/_robot_localization_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/_robot_localization_s.ep.rosidl_typesupport_introspection_c.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_c.so
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_fastrtps_c.so
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_introspection_c.so
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/__init__.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_from_ll.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_from_ll_s.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_get_state.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_get_state_s.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_datum.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_datum_s.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_pose.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_pose_s.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_utm_zone.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_utm_zone_s.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_to_ll.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_to_ll_s.c
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_toggle_filter_processing.py
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_toggle_filter_processing_s.c
+-- Up-to-date symlink: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date symlink: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_introspection_c.so
+-- Up-to-date symlink: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_c.so
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/FromLL.idl
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/GetState.idl
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetDatum.idl
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetPose.idl
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetUTMZone.idl
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/ToggleFilterProcessing.idl
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/ToLL.idl
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/FromLL.srv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/GetState.srv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetDatum.srv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetPose.srv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/SetUTMZone.srv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/ToggleFilterProcessing.srv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/srv/ToLL.srv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/filter_base-test
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_filter_base_diagnostics_timestamps
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_ekf
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_ekf_node_interfaces
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_ukf
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_ukf_node_interfaces
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_robot_localization_estimator
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_navsat_conversions
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_ros_robot_localization_listener
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/test_ros_robot_localization_listener_publisher
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/navsat_transform_node
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/ekf_node
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/ukf_node
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/robot_localization/robot_localization_listener_node
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librl_lib.so
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/ament_index/resource_index/package_run_dependencies/robot_localization
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/ament_index/resource_index/parent_prefix_path/robot_localization
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/environment/ament_prefix_path.sh
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/environment/ament_prefix_path.dsv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/environment/path.sh
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/environment/path.dsv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/local_setup.bash
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/local_setup.sh
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/local_setup.zsh
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/local_setup.dsv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.dsv
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/ament_index/resource_index/packages/robot_localization
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/rosidl_cmake-extras.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localizationConfig.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localizationConfig-version.cmake
+-- Symlinking: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/package.xml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_generator_c.so
+-- Set non-toolchain portion of runtime path of "/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_generator_c.so" to ""
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_fastrtps_c.so" to ""
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_fastrtps_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_c.so" to ""
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_introspection_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_cpp.so" to ""
+Listing '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/__init__.py'...
+Listing '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/__init__.py'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_from_ll.py'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_get_state.py'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_datum.py'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_pose.py'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_set_utm_zone.py'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_to_ll.py'...
+Compiling '/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/python3.12/site-packages/robot_localization/srv/_toggle_filter_processing.py'...
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_generator_py.so
+-- Set non-toolchain portion of runtime path of "/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/lib/librobot_localization__rosidl_generator_py.so" to ""
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag2.sh
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_filter_base_diagnostics_timestamps.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag1.sh
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag2.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_se_node_interfaces.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag2.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_filter_base.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ros_robot_localization_listener.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag3.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag1.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test1.bag
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag2.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag3.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ros_robot_localization_listener.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag3.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test2.bag
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag2.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag2.sh
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag1.sh
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test3.bag
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag3.sh
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag3.sh
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_filter_base_diagnostics_timestamps.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag3.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_se_node_interfaces.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_robot_localization_estimator.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_se_node_interfaces.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag1.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag1.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_filter_base_diagnostics_timestamps.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag1.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_robot_localization_estimator.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ros_robot_localization_listener.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ukf.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_navsat_conversions.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_ros_robot_localization_listener_publisher.cpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/test/test_localization_node_bag_pose_tester.cpp
+-- Up-to-date: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization
+-- Up-to-date: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/ros_filter.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/ros_robot_localization_listener.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/ros_filter_utilities.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/navsat_conversions.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/filter_state.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/filter_base.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/ekf.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/ukf.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/filter_common.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/filter_utilities.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/ros_filter_types.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/robot_localization_estimator.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/measurement.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/include/robot_localization/robot_localization/navsat_transform.hpp
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/params
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/params/ekf.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/params/ukf.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/params/navsat_transform.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/params/ekf_new.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/params/dual_ekf_navsat_example.yaml
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/ukf.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/ekf_new.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/dual_ekf_navsat_example.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/joy_teleop.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/navsat_transform.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/ekf.launch.py
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_generator_cExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_generator_cExport-relwithdebinfo.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_typesupport_fastrtps_cExport-relwithdebinfo.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_generator_cppExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_typesupport_fastrtps_cppExport-relwithdebinfo.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_introspection_cExport-relwithdebinfo.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_cExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_cExport-relwithdebinfo.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_introspection_cppExport-relwithdebinfo.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_cppExport-relwithdebinfo.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_generator_pyExport.cmake
+-- Installing: /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/cmake/export_robot_localization__rosidl_generator_pyExport-relwithdebinfo.cmake

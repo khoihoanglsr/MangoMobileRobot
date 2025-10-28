@@ -1,0 +1,1 @@
+/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/robot_localization/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

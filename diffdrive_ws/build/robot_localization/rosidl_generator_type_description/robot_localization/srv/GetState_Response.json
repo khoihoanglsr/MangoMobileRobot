@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robot_localization/srv/GetState_Response",
+      "fields": [
+        {
+          "name": "state",
+          "type": {
+            "type_id": 59,
+            "capacity": 15,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "covariance",
+          "type": {
+            "type_id": 59,
+            "capacity": 225,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "robot_localization/srv/GetState_Response",
+      "hash_string": "RIHS01_c35a19395fa7f0ed4457fafda2ddf661e2616cacec4dd30c3d1fcdeab21fd60e"
+    }
+  ]
+}
