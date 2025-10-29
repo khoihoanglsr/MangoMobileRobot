@@ -1,0 +1,31 @@
+# config/teleop.yaml
+teleop_twist_joy_node:
+  ros__parameters:
+    # ===== Mapping trục / nút =====
+    axis_linear.x: 1          # Stick trái dọc: tiến/lùi
+    scale_linear.x: 0.6       # Hệ số tốc độ thẳng (bình thường)
+    scale_linear_turbo: 1.0   # Hệ số tốc độ thẳng khi bật turbo
+
+    axis_angular.z: 3         # Stick phải ngang: quay trái/phải (thường là 3; có tay cầm là 0 hoặc 2)
+    scale_angular.z: 1.2      # Hệ số tốc độ góc (bình thường)
+    scale_angular_turbo: 2.0  # Hệ số tốc độ góc khi bật turbo
+
+    # ===== Nút điều kiện / turbo =====
+    enable_button: 4          # LB phải GIỮ để bắt đầu xuất cmd_vel (thường: 4 = LB)
+    require_enable_button: true
+    enable_turbo_button: 5    # RB để bật tốc độ turbo (thường: 5 = RB)
+
+    # ===== Khác =====
+    deadzone: 0.15            # Bỏ rung nhẹ quanh 0 cho các trục
+    autorepeat_rate: 20.0     # Hz - giữ cần sẽ gửi lệnh lặp đều
+    allow_stamped_vel: false  # /cmd_vel không gắn timestamp (giữ default)
+
+# Gợi ý tuỳ biến nhanh:
+# - Nếu dùng tay cầm PlayStation (DualShock/DualSense), có thể cần đổi:
+#   axis_angular.z: 0
+#   enable_button: 4  (L1)
+#   enable_turbo_button: 5 (R1)
+#
+# - Nếu robot chạy quá nhanh/chậm: chỉnh scale_linear.x, scale_angular.z.
+# - Nếu muốn không cần giữ LB: đặt require_enable_button: false
+

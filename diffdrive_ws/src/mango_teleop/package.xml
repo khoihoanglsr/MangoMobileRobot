@@ -1,0 +1,13 @@
+<package format="3">
+  <name>mango_teleop</name>
+  <version>0.0.1</version>
+  <description>Gamepad teleop launcher</description>
+
+  <maintainer email="creeperthien@gmail.com">robomango</maintainer>
+  <license>MIT</license>
+
+  <!-- runtime deps -->
+  <exec_depend>joy</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
+</package>
+
