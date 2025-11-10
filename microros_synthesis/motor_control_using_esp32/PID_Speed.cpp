@@ -1,5 +1,5 @@
-#include "PID_TocDo.h"
-#include <math.h>
+#include "PID_Speed.h"
+#include <math.h> 
 
 void updatePIDSpeed(){
   if (armed && controlMode==MODE_SPEED && holdEnable) {
@@ -8,7 +8,7 @@ void updatePIDSpeed(){
     static bool  filtInit = false;
     static float prevMeas = 0.0f;
     static float dmeas_filt = 0.0f;
-    const  float ALPHA = 0.25f;
+    const  float ALPHA = 0.15f;
 
     uint32_t nowMs = millis();
     float dt_s = (lastPidMs==0) ? (calcPeriodMs/1000.0f) : (nowMs - lastPidMs)/1000.0f;
@@ -67,6 +67,7 @@ void updatePIDSpeed(){
     if (ki > 1e-6f) {
       float iMax = (UMAX - u_pd - u_ff) / ki;
       float iMin = (UMIN - u_pd - u_ff) / ki;
+      
       if (integ_new > iMax) integ_new = iMax;
       if (integ_new < iMin) integ_new = iMin;
     }
@@ -89,6 +90,8 @@ void updatePIDSpeed(){
     // Mở vòng / không giữ: pass-through per-motor
     outCmd[0] = cmdOpenLoop[0];
     outCmd[1] = cmdOpenLoop[1];
+
+
     // last_u_pid có thể phản ánh trung bình lệnh để tiện log
     last_u_pid = 0.5f * ( (float)outCmd[0] + (float)outCmd[1] );
   }
