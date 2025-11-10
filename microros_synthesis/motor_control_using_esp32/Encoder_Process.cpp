@@ -1,5 +1,5 @@
-#include "Encoder_Xuly.h"
-#include "Tien_ich.h"
+#include "Encoder_Process.h"
+#include "global.h"
 #include "soc/gpio_reg.h"
 
 // Bảng giải mã x4 (giữ nguyên)

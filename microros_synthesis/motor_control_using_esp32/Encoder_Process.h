@@ -1,7 +1,7 @@
 #ifndef ENCODER_XULY_H
 #define ENCODER_XULY_H
 
-#include "Tien_ich.h"
+#include "global.h"
 
 // ISR cho Encoder Motor 0 (trái)
 void IRAM_ATTR encoderISR0A();  // CHANGE trên M0_ENC_A_PIN

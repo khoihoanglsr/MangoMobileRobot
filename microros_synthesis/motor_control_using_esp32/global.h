@@ -1,8 +1,13 @@
-#ifndef TIEN_ICH_H
-#define TIEN_ICH_H
+#ifndef GLOBAL_H
+#define GLOBAL_H
 
-#include <Arduino.h>+
+#include <Arduino.h>
 #include <math.h>
+
+#ifndef PWM_CONTROL
+#define PWM_CONTROL 255   // giá trị PWM tay: 0..255
+#endif
+
 
 // ===== CHÂN (2 động cơ, DIR+PWM) =====
 // Motor 0 (trái)
@@ -10,7 +15,7 @@
 #define M0_DIR_PIN    26
 #define M0_ENC_A_PIN  34
 #define M0_ENC_B_PIN  35
-// Motor 1 (phải) — chỉnh lại theo phần cứng của bạn nếu khác
+// Motor 1 (phải)
 #define M1_PWM_PIN    27
 #define M1_DIR_PIN    14
 #define M1_ENC_A_PIN  32
@@ -19,8 +24,7 @@
 #define M_LEFT  0
 #define M_RIGHT 1
 
-//LCD
-
+// LCD
 #ifndef USE_LCD_16x2
 #define USE_LCD_16x2 1   // bật LCD; đặt 0 nếu muốn build không LCD
 #endif
@@ -31,7 +35,7 @@ static const int PWM_MAX  = (1<<PWM_BITS)-1;
 extern int   PWM_FREQ_HZ;
 
 // ===== THỜI GIAN TÍNH TOÁN =====
-static const unsigned long calcPeriodMs = 1;    // 1 ms
+static const unsigned long calcPeriodMs = 1;    
 
 // CPR "hiển thị" mong muốn (X1)
 static const int CPR_USER = 500;
@@ -81,12 +85,11 @@ extern int   CMD_DEAD;         // deadband cho PULSE
 
 // Đảo chiều theo từng bánh
 extern bool  invert_dir[2];
+extern bool  invert_encoder[2];
 
 // Streaming/plot
 extern bool  streamOn, streamCSV;
 extern unsigned long streamRateMs, lastStreamMs;
-extern bool  echoCmd;
-extern bool  plotOn;
 
 // Slew-rate (giới hạn tốc độ thay đổi) theo từng bánh
 extern float SLEW_RATE_PER_MS;
@@ -111,11 +114,7 @@ extern float KD_ALPHA;
 extern float SP_RATE_RPM_PER_S;
 extern float sp_rpm_cmd;
 
-// ===== HÀM TIỆN ÍCH =====
-bool toLongSafe(const String &s, long &out);
-bool toFloatSafe(const String &s, float &out);
-void printState();
-void printLine(bool csv);
-void printHeader(bool csv);
+extern unsigned long lastCmdMs;
+extern const uint32_t COMMAND_TIMEOUT_MS;
 
 #endif

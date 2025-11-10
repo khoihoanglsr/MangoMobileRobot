@@ -1,4 +1,4 @@
-#include "Tinh_toan_TocDoGoc.h"
+#include "Calc_Speed.h"
 #include <math.h>
 
 void calcSpeed(){
@@ -18,9 +18,12 @@ void calcSpeed(){
     // Tích lũy phần lẻ vòng mô-tơ (motor side)
     motFrac[i] += dc_scaled;
     long addMot = 0;
-    if (motFrac[i] >= 1.0)       { addMot = (long)floor(motFrac[i]); motFrac[i] -= (double)addMot; }
-    else if (motFrac[i] <= -1.0) { addMot = (long)ceil (motFrac[i]); motFrac[i] -= (double)addMot; }
-    if (addMot != 0) encCountMotorScaled[i] += addMot;
+    if (motFrac[i] >= 1.0) { 
+      addMot = (long)floor(motFrac[i]); motFrac[i] -= (double)addMot; }
+    else if (motFrac[i] <= -1.0) { 
+      addMot = (long)ceil (motFrac[i]); motFrac[i] -= (double)addMot; }
+    if (addMot != 0) 
+      encCountMotorScaled[i] += addMot;
 
     // cps và rpm OUT
     meas_cps[i] = (float)(dc_scaled * 1000.0 / (double)dt);
@@ -40,7 +43,7 @@ void calcSpeed(){
     if (CPR_OUT_user > 0.0) {
       goc_out_deg[i] += (float)(dc_scaled * 360.0 / CPR_OUT_user);
       while (goc_out_deg[i] >= 360.0f) goc_out_deg[i] -= 360.0f;
-      while (goc_out_deg[i] <    0.0f) goc_out_deg[i] += 360.0f;
+      while (goc_out_deg[i] < 0.0f) goc_out_deg[i] += 360.0f;
     }
 
     // Đếm xung trục OUT (raw) qua tỉ số truyền
@@ -48,9 +51,14 @@ void calcSpeed(){
       double dcout_raw = dc_scaled / (double)gearRatio;
       encOutFrac[i] += dcout_raw;
       long addOut = 0;
-      if (encOutFrac[i] >= 1.0)        { addOut = (long)floor(encOutFrac[i]); encOutFrac[i] -= (double)addOut; }
-      else if (encOutFrac[i] <= -1.0)  { addOut = (long)ceil (encOutFrac[i]); encOutFrac[i] -= (double)addOut; }
-      if (addOut != 0) encCountOut_raw[i] += addOut;
+      if (encOutFrac[i] >= 1.0) { 
+        addOut = (long)floor(encOutFrac[i]); 
+        encOutFrac[i] -= (double)addOut; 
+      } else if (encOutFrac[i] <= -1.0) { 
+        addOut = (long)ceil (encOutFrac[i]); 
+        encOutFrac[i] -= (double)addOut; 
+      } if (addOut != 0) 
+        encCountOut_raw[i] += addOut;
     }
   }
 

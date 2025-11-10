@@ -1,7 +1,7 @@
 #ifndef PWM_DIR_H
 #define PWM_DIR_H
 
-#include "Tien_ich.h"
+#include "global.h"
 
 /*
   ================== MÔ TẢ CHUNG ==================
@@ -27,6 +27,7 @@
 /// @param forward: true = quay thuận, false = quay nghịch
 /// Ghi chú: tự động đảo chiều nếu invert_dir[i] = true
 void setDir(int i, bool forward);
+
 
 
 /// ========== XUẤT PWM 8-BIT ==========
