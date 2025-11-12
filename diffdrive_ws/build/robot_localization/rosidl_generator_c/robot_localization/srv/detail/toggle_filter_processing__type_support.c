@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "robot_localization/srv/detail/toggle_filter_processing__struct.h"
 #include "robot_localization/srv/detail/toggle_filter_processing__type_support.h"
 #include "robot_localization/srv/detail/toggle_filter_processing__functions.h"
-#include "robot_localization/srv/detail/toggle_filter_processing__struct.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/robomango/workspace/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/tmp"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src/micro_ros_agent-stamp"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src/micro_ros_agent-stamp"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/tmp"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src/micro_ros_agent-stamp"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src/micro_ros_agent-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/robomango/workspace/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src/micro_ros_agent-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src/micro_ros_agent-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/robomango/workspace/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src/micro_ros_agent-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/src/micro_ros_agent-stamp${cfgdir}") # cfgdir has leading slash
 endif()

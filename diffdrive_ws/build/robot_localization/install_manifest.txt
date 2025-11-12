@@ -65,6 +65,7 @@
 /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/params/dual_ekf_navsat_example.yaml
 /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/ukf.launch.py
 /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/ekf_new.launch.py
+/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/__pycache__/joy_teleop.launch.cpython-312.pyc
 /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/dual_ekf_navsat_example.launch.py
 /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/joy_teleop.launch.py
 /home/robomango/workspace/MangoMobileRobot/diffdrive_ws/install/robot_localization/share/robot_localization/launch/navsat_transform.launch.py

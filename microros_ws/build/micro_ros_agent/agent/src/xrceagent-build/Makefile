@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent
+CMAKE_SOURCE_DIR = /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build
+CMAKE_BINARY_DIR = /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,7 +87,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"licenses\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"licenses\" \"spdlog-1.9.2\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

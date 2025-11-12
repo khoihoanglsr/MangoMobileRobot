@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robomango/workspace/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent
+CMAKE_SOURCE_DIR = /home/robomango/workspace/MangoMobileRobot/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robomango/workspace/microros_ws/build/micro_ros_agent
+CMAKE_BINARY_DIR = /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent
 
 # Utility rule file for xrceagent.
 
@@ -76,50 +76,50 @@ CMakeFiles/xrceagent-complete: agent/src/xrceagent-stamp/xrceagent-patch
 CMakeFiles/xrceagent-complete: agent/src/xrceagent-stamp/xrceagent-configure
 CMakeFiles/xrceagent-complete: agent/src/xrceagent-stamp/xrceagent-build
 CMakeFiles/xrceagent-complete: agent/src/xrceagent-stamp/xrceagent-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'xrceagent'"
-	/usr/bin/cmake -E make_directory /home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles
-	/usr/bin/cmake -E touch /home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles/xrceagent-complete
-	/usr/bin/cmake -E touch /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'xrceagent'"
+	/usr/bin/cmake -E make_directory /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles
+	/usr/bin/cmake -E touch /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles/xrceagent-complete
+	/usr/bin/cmake -E touch /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-done
 
 agent/src/xrceagent-stamp/xrceagent-build: agent/src/xrceagent-stamp/xrceagent-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'xrceagent'"
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && $(MAKE)
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && /usr/bin/cmake -E touch /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'xrceagent'"
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && $(MAKE)
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && /usr/bin/cmake -E touch /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-build
 
 agent/src/xrceagent-stamp/xrceagent-configure: agent/tmp/xrceagent-cfgcmd.txt
 agent/src/xrceagent-stamp/xrceagent-configure: agent/tmp/xrceagent-cache-.cmake
 agent/src/xrceagent-stamp/xrceagent-configure: agent/src/xrceagent-stamp/xrceagent-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'xrceagent'"
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && /usr/bin/cmake "-GUnix Makefiles" -C/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-cache-.cmake -S /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent -B /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && /usr/bin/cmake -E touch /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'xrceagent'"
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && /usr/bin/cmake "-GUnix Makefiles" -C/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-cache-.cmake -S /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent -B /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && /usr/bin/cmake -E touch /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-configure
 
 agent/src/xrceagent-stamp/xrceagent-download: agent/src/xrceagent-stamp/xrceagent-gitinfo.txt
 agent/src/xrceagent-stamp/xrceagent-download: agent/src/xrceagent-stamp/xrceagent-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'xrceagent'"
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src && /usr/bin/cmake -P /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-gitclone.cmake
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src && /usr/bin/cmake -E touch /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'xrceagent'"
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src && /usr/bin/cmake -P /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-gitclone.cmake
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src && /usr/bin/cmake -E touch /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-download
 
 agent/src/xrceagent-stamp/xrceagent-install: agent/src/xrceagent-stamp/xrceagent-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing install step for 'xrceagent'"
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && $(MAKE) install
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && /usr/bin/cmake -E touch /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing install step for 'xrceagent'"
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && $(MAKE) install
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build && /usr/bin/cmake -E touch /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-install
 
 agent/src/xrceagent-stamp/xrceagent-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'xrceagent'"
-	/usr/bin/cmake -Dcfgdir= -P /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-mkdirs.cmake
-	/usr/bin/cmake -E touch /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'xrceagent'"
+	/usr/bin/cmake -Dcfgdir= -P /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-mkdirs.cmake
+	/usr/bin/cmake -E touch /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-mkdir
 
 agent/src/xrceagent-stamp/xrceagent-patch: agent/src/xrceagent-stamp/xrceagent-patch-info.txt
 agent/src/xrceagent-stamp/xrceagent-patch: agent/src/xrceagent-stamp/xrceagent-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'xrceagent'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'xrceagent'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-patch
+	/usr/bin/cmake -E touch /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-patch
 
 agent/src/xrceagent-stamp/xrceagent-update: agent/tmp/xrceagent-gitupdate.cmake
 agent/src/xrceagent-stamp/xrceagent-update: agent/src/xrceagent-stamp/xrceagent-update-info.txt
 agent/src/xrceagent-stamp/xrceagent-update: agent/src/xrceagent-stamp/xrceagent-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing update step for 'xrceagent'"
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent && /usr/bin/cmake -Dcan_fetch=YES -P /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing update step for 'xrceagent'"
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent && /usr/bin/cmake -Dcan_fetch=YES -P /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-gitupdate.cmake
 
 xrceagent: CMakeFiles/xrceagent
 xrceagent: CMakeFiles/xrceagent-complete
@@ -142,6 +142,6 @@ CMakeFiles/xrceagent.dir/clean:
 .PHONY : CMakeFiles/xrceagent.dir/clean
 
 CMakeFiles/xrceagent.dir/depend:
-	cd /home/robomango/workspace/microros_ws/build/micro_ros_agent && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robomango/workspace/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent /home/robomango/workspace/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent /home/robomango/workspace/microros_ws/build/micro_ros_agent /home/robomango/workspace/microros_ws/build/micro_ros_agent /home/robomango/workspace/microros_ws/build/micro_ros_agent/CMakeFiles/xrceagent.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robomango/workspace/MangoMobileRobot/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent /home/robomango/workspace/MangoMobileRobot/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/CMakeFiles/xrceagent.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/xrceagent.dir/depend
 

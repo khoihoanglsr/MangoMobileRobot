@@ -1,8 +1,8 @@
-# Install script for directory: /home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent
+# Install script for directory: /home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robomango/workspace/microros_ws/install/micro_ros_agent")
+  set(CMAKE_INSTALL_PREFIX "/home/robomango/workspace/MangoMobileRobot/microros_ws/install/micro_ros_agent")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -55,8 +55,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/libmicroxrcedds_agent.so.2.4.3"
-    "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/libmicroxrcedds_agent.so.2.4"
+    "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/libmicroxrcedds_agent.so.2.4.3"
+    "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/libmicroxrcedds_agent.so.2.4"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmicroxrcedds_agent.so.2.4.3"
@@ -76,18 +76,18 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/libmicroxrcedds_agent.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/libmicroxrcedds_agent.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/uxr/agent" TYPE DIRECTORY FILES "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent/include/uxr/agent/" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/uxr/agent" TYPE DIRECTORY FILES "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent/include/uxr/agent/" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.h$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent/cmake/microxrcedds_agentTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent/cmake/microxrcedds_agentTargets.cmake"
-         "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/Export/9df44ac295fd94b075ef396597d8c8c9/microxrcedds_agentTargets.cmake")
+         "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/Export/9df44ac295fd94b075ef396597d8c8c9/microxrcedds_agentTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent/cmake/microxrcedds_agentTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -100,25 +100,37 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent/cmake" TYPE FILE FILES "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/Export/9df44ac295fd94b075ef396597d8c8c9/microxrcedds_agentTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent/cmake" TYPE FILE FILES "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/Export/9df44ac295fd94b075ef396597d8c8c9/microxrcedds_agentTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent/cmake" TYPE FILE FILES "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/Export/9df44ac295fd94b075ef396597d8c8c9/microxrcedds_agentTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent/cmake" TYPE FILE FILES "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/Export/9df44ac295fd94b075ef396597d8c8c9/microxrcedds_agentTargets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/uxr/agent" TYPE FILE FILES "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/include/uxr/agent/config.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/uxr/agent" TYPE FILE FILES "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/include/uxr/agent/config.hpp")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "licenses" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent" TYPE FILE FILES "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent/LICENSE")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent" TYPE FILE FILES "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent/LICENSE")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/microxrcedds_agent/cmake" TYPE FILE FILES
-    "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/cmake/config/microxrcedds_agentConfig.cmake"
-    "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/cmake/config/microxrcedds_agentConfigVersion.cmake"
+    "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/cmake/config/microxrcedds_agentConfig.cmake"
+    "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/cmake/config/microxrcedds_agentConfigVersion.cmake"
     )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "spdlog-1.9.2" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/robomango/workspace/MangoMobileRobot/microros_ws/install/micro_ros_agent/")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  file(INSTALL DESTINATION "/home/robomango/workspace/MangoMobileRobot/microros_ws/install/micro_ros_agent" TYPE DIRECTORY FILES "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/temp_install/spdlog-1.9.2/" USE_SOURCE_PERMISSIONS)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -129,5 +141,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

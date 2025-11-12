@@ -1,1 +1,2 @@
-/home/robomango/workspace/MangoMobileRobot/diffdrive_ws/build/diffdrive_description/ament_cmake_environment_hooks/local_setup.dsv
+source;share/diffdrive_description/environment/ament_prefix_path.sh
+source;share/diffdrive_description/environment/path.sh

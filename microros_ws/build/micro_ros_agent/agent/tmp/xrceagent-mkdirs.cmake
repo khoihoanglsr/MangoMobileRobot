@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build"
-  "/home/robomango/workspace/microros_ws/install/micro_ros_agent"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/tmp"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src"
-  "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/install/micro_ros_agent"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/tmp"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src"
+  "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/robomango/workspace/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/robomango/workspace/MangoMobileRobot/microros_ws/build/micro_ros_agent/agent/src/xrceagent-stamp${cfgdir}") # cfgdir has leading slash
 endif()

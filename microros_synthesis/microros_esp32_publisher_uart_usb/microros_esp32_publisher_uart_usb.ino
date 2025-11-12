@@ -49,7 +49,7 @@ long calStartCount[2] = {0, 0};
 unsigned long lastCalcMs = 0;
 
 // --- Các giá trị đo lường ---
-long  lastCount[2]      = {0, 0};
+long  lastCount[2]      = {0, 0};ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyACM0
 float meas_cps[2]       = {0.0f, 0.0f};
 float meas_rpm_out[2]   = {0.0f, 0.0f};
 float goc_out_deg[2]    = {0.0f, 0.0f};

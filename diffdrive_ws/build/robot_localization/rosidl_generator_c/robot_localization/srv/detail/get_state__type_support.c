@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "robot_localization/srv/detail/get_state__functions.h"
 #include "robot_localization/srv/detail/get_state__struct.h"
 #include "robot_localization/srv/detail/get_state__type_support.h"
-#include "robot_localization/srv/detail/get_state__functions.h"
 
 #ifdef __cplusplus
 extern "C"
