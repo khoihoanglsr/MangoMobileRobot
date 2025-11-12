@@ -15,7 +15,7 @@ Một số điều cần chuẩn bị trước khi bắt đầu:
 * Tạo thư mục workspace trong home
 > cd ~
 > mkdir workspace
-*Clone repo trên github vào workspace vừa tạo
+* Clone repo trên github vào workspace vừa tạo
 > cd ~/workspace
 > git clone -b feat/update-files https://github.com/khoihoanglsr/MangoMobileRobot.git
 * Biên dịch (build) thành công MangoMobileRobot/src (chứa `my_joy_teleop`).
