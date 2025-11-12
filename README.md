@@ -38,6 +38,7 @@ Bạn sẽ thấy một kết quả, ví dụ:
 > /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0
 
 2. Sao chép đường dẫn và khởi chạy agent:
+
 THAY THẾ --dev /dev/serial/by-id/... bằng đường dẫn bạn vừa tìm thấy
 > ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0
 
