@@ -47,6 +47,9 @@ Lưu ý: Hãy để terminal này chạy. Nếu nó kết nối thành công, b�
 ### Terminal 2: Khởi chạy Trình điều khiển Joystick
 Terminal này đọc tín hiệu thô từ tay cầm.
 
+0.
+> ls /dev/input/js*
+
 1. Cấp quyền cho joystick: Lệnh này chỉ cần chạy một lần sau khi cắm tay cầm.
 > sudo chmod a+r /dev/input/js0
 
