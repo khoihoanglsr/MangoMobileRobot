@@ -37,7 +37,7 @@ static inline void analogWriteInitBoth() {
 
 // ===================== THÔNG SỐ CƠ KHÍ =====================
 static const float WHEEL_RADIUS_M = 0.050f;           // bán kính bánh (m)
-static const float BASE_WIDTH_M   = 0.328f;            // khoảng cách 2 bánh (m)
+static const float BASE_WIDTH_M   = 0.328f;            // khoảng cách 2 bánh (m) (Sửa lại từ 0.300f nếu 0.328f là đúng)
 static const float TWO_PI_R = 2.0f * (float)M_PI * WHEEL_RADIUS_M;
 
 // Biến trạng thái PID (tách biệt cho 2 bánh)
@@ -124,7 +124,7 @@ static uint32_t last_cmdvel_ms = 0;
 static void cmdvel_cb(const void *msgin) {
   const geometry_msgs__msg__Twist *m = (const geometry_msgs__msg__Twist *)msgin;
   
-  // Ghi thẳng vào mảng global mà PID_Speed.cpp có thể đọc
+  // Ghi thẳng vào mảng global
   computeWheelRPM(m->linear.x, m->angular.z, sp_rpm[M_LEFT], sp_rpm[M_RIGHT]); 
   
   last_cmdvel_ms = millis();
@@ -184,7 +184,7 @@ static void run_control_step() {
   float u_ff_L = KFF * sp_rpm_cmd_L;
   if (fabsf(sp_rpm_cmd_L) > 1.0f) u_ff_L += (sp_rpm_cmd_L > 0 ? +MIN_PWM_FF : -MIN_PWM_FF);
 
-  float u_L_final = u_pd_L + u_ff_L + ki * integ_L; // Tạm thời chưa anti-windup
+  float u_L_final = u_pd_L + u_ff_L + ki * integ_L; 
 
   // ----- R bánh -----
   float err_R   = sp_rpm_cmd_R - measFilt_R;
@@ -205,7 +205,6 @@ static void run_control_step() {
   if (u_L_final > UMAX && err_L > 0) { /* không cộng integ */ }
   else if (u_L_final < UMIN && err_L < 0) { /* không cộng integ */ }
   else {
-    // Chỉ tích phân khi không bão hòa 
     integ_L += err_L * dt_s; 
   } 
   
@@ -259,12 +258,16 @@ static void apply_pwm_modeaware() {
   }
 }
 
+// ===================== ODOM Timer Callback =====================
 static void odom_timer_cb(rcl_timer_t *, int64_t) {
   unsigned long now_ms = millis();
   float dt = (prev_odom_ms == 0) ? 0.02f : (now_ms - prev_odom_ms) / 1000.0f;
   prev_odom_ms = now_ms;
 
   // RPM → m/s, rad/s
+  // LƯU Ý: meas_rpm_out đã được lật (inverted) trong run_control_step,
+  // nên odometry CŨNG sẽ bị ảnh hưởng. Điều này có thể là ĐÚNG hoặc SAI,
+  // tùy thuộc vào việc bạn muốn "sửa" encoder ở đâu.
   float rpsL = meas_rpm_out[0] / 60.0f;
   float rpsR = meas_rpm_out[1] / 60.0f;
   float lin_x = ((rpsL + rpsR) * 0.5f) * TWO_PI_R;                           // m/s
@@ -313,7 +316,7 @@ void setup() {
   RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
   RCCHECK(rclc_node_init_default(&node, "esp32_diff_subscriber", "", &support));
 
-  // Subscriber: /cmd_vel (teleop_twist_keyboard xuất topic này)
+  // Subscriber: /cmd_vel 
   RCCHECK(rclc_subscription_init_default(
     &sub_cmdvel, &node,
     ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
@@ -329,7 +332,7 @@ void setup() {
   RCCHECK(rclc_timer_init_default(
     &odom_timer, &support, RCL_MS_TO_NS(20), odom_timer_cb));
 
-  // Executor
+  // Executor (1 sub, 1 timer)
   RCCHECK(rclc_executor_init(&executor, &support.context, 2, &allocator));
   RCCHECK(rclc_executor_add_subscription(&executor, &sub_cmdvel, &msg_cmdvel, &cmdvel_cb, ON_NEW_DATA));
   RCCHECK(rclc_executor_add_timer(&executor, &odom_timer));
@@ -361,21 +364,15 @@ void loop() {
   // 1. Xử lý các tác vụ ROS (nhận /cmd_vel, gửi /odom)
   RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(1)));
 
-  // 2. VÒNG LẶP ĐIỀU KHIỂN (GIỐNG HỆT CODE BT)
-  //    (calcPeriodMs được định nghĩa trong Global.h, vd: 20ms)
+  // 2. VÒNG LẶP ĐIỀU KHIỂN
   if (millis() - lastCalcMs >= calcPeriodMs) {
-    
-    // Chạy toàn bộ logic: CalcSpeed -> PID -> ApplyPWM
     run_control_step();
-    
-    // Cập nhật mốc thời gian
     lastCalcMs = millis();
   }
 
-  // 3. Cơ chế an toàn (Tùy chọn, nhưng nên giữ)
-  //    Nếu không nhận được lệnh ROS trong 200ms, dừng robot
+  // 3. Cơ chế an toàn
   if (millis() - last_cmdvel_ms > 200) {
-    sp_rpm[M_LEFT] = 0.0f;    // Ghi vào mảng global
+    sp_rpm[M_LEFT] = 0.0f;
     sp_rpm[M_RIGHT] = 0.0f;
   }
 

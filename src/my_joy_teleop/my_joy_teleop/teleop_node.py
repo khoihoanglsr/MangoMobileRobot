@@ -25,7 +25,7 @@ class JoyTeleopNode(Node):
         self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
 
         # Khai báo các tham số cho tốc độ tối đa (tùy chọn nhưng nên làm)
-        self.declare_parameter('scale_linear', 0.5)  # Tốc độ tiến/lùi tối đa (m/s)
+        self.declare_parameter('scale_linear', 1.5)  # Tốc độ tiến/lùi tối đa (m/s)
         self.declare_parameter('scale_angular', 1.0) # Tốc độ xoay tối đa (rad/s)
 
         self.get_logger().info("Node teleop tùy chỉnh đã khởi động!")
@@ -40,7 +40,7 @@ class JoyTeleopNode(Node):
         scale_linear = self.get_parameter('scale_linear').value
         scale_angular = self.get_parameter('scale_angular').value
 
-        # Tạo một tin nhắn Twist mới (mặc định là 0)
+        # Tạo một tin nhắn Twist mới (mặc định là 0)	
         twist_msg = Twist()
 
         # Kiểm tra xem nút "kích hoạt" có đang được giữ không
