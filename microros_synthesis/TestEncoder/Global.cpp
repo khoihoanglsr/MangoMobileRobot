@@ -35,6 +35,7 @@ double        motFrac[2]             = {0.0, 0.0};
 
 // ===== Giao tiếp/arm =====
 String rx = "";
+bool   armed = false;
 
 // ===== Điều khiển hở vòng & đầu ra =====
 int cmdOpenLoop[2] = {0, 0};     // -255..+255
@@ -64,7 +65,7 @@ bool  BYPASS_SLEW_IN_SPEED = true;
 int   CMD_DEAD_PID         = 6;
 
 float KFF              = 0.0f;     // feedforward gain
-float MIN_PWM_FF       = 60.0f;     // ngưỡng PWM tối thiểu khi có FF
+float MIN_PWM_FF       = 5.0f;     // ngưỡng PWM tối thiểu khi có FF
 float KD_ALPHA         = 0.3f;     // hệ số lọc D-term
 float SP_RATE_RPM_PER_S= 300.0f;   // giới hạn dốc SP (RPM/s)
 float sp_rpm_cmd       = 0.0f;     // setpoint RPM

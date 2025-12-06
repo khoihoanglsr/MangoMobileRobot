@@ -374,7 +374,7 @@ micro_ros_agent_SOURCE_DIR:STATIC=/home/robomango/workspace/microros_ws/src/uros
 micro_ros_msgs_DIR:PATH=/home/robomango/workspace/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake
 
 //The directory containing a CMake configuration file for microxrcedds_agent.
-microxrcedds_agent_DIR:PATH=/home/robomango/microros_ws/install/micro_ros_agent/share/microxrcedds_agent/cmake
+microxrcedds_agent_DIR:PATH=/home/robomango/workspace/MangoMobileRobot/install/micro_ros_agent/share/microxrcedds_agent/cmake
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -443,7 +443,7 @@ rosidl_typesupport_introspection_c_DIR:PATH=/opt/ros/jazzy/share/rosidl_typesupp
 rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake
 
 //The directory containing a CMake configuration file for spdlog.
-spdlog_DIR:PATH=/home/robomango/microros_ws/install/micro_ros_agent/lib/cmake/spdlog
+spdlog_DIR:PATH=/home/robomango/workspace/MangoMobileRobot/microros_ws/install/micro_ros_agent/lib/cmake/spdlog
 
 //Value Computed by CMake
 uagent_superbuild_BINARY_DIR:STATIC=/home/robomango/workspace/microros_ws/build/micro_ros_agent

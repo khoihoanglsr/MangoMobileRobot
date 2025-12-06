@@ -35,27 +35,18 @@ static inline uint8_t IRAM_ATTR readAB_bits_idx(int i){
 }
 
 // Cập nhật encoder cho motor i
-static inline void IRAM_ATTR encUpdate(int i) {
+static inline void IRAM_ATTR encUpdate(int i){
   uint8_t curr = readAB_bits_idx(i);
-  uint8_t idx = (prevAB[i] << 2) | curr;  // 0..15
-  int8_t step = qtab[idx];
+  uint8_t idx  = (prevAB[i] << 2) | curr; // 0..15
+  int8_t step  = qtab[idx];
   if (step) encCount[i] += step;
   prevAB[i] = curr;
 }
 
 // ISR cho từng cạnh A/B của M0
-void IRAM_ATTR encoderISR0A(){ 
-  encUpdate(0); 
-}
-
-void IRAM_ATTR encoderISR0B(){ 
-  encUpdate(0); 
-}
+void IRAM_ATTR encoderISR0A(){ encUpdate(0); }
+void IRAM_ATTR encoderISR0B(){ encUpdate(0); }
 
 // ISR cho từng cạnh A/B của M1
-void IRAM_ATTR encoderISR1A(){ 
-  encUpdate(1); 
-}
-void IRAM_ATTR encoderISR1B(){ 
-  encUpdate(1); 
-}
+void IRAM_ATTR encoderISR1A(){ encUpdate(1); }
+void IRAM_ATTR encoderISR1B(){ encUpdate(1); }

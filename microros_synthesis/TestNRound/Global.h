@@ -25,12 +25,12 @@
 #define M_RIGHT 1
 
 // ===== PWM =====
-static const int PWM_BITS = 10;                 
+static const int PWM_BITS = 10;                 // 0..1023
 static const int PWM_MAX  = (1<<PWM_BITS)-1;
 extern int   PWM_FREQ_HZ;
 
 // ===== THỜI GIAN TÍNH TOÁN =====
-static const unsigned long calcPeriodMs = 20;    
+static const unsigned long calcPeriodMs = 1;    
 
 // CPR "hiển thị" mong muốn (X1)
 static const int CPR_USER = 500;
@@ -117,5 +117,10 @@ extern float sp_rpm_cmd;
 extern unsigned long lastCmdMs;
 extern const uint32_t COMMAND_TIMEOUT_MS;
 
+extern volatile long encCountOut_raw[2];
+extern double        encOutFrac[2];
 
+// Bộ đếm Motor Scaled & phần lẻ theo từng bánh
+extern volatile long encCountMotorScaled[2];
+extern double        motFrac[2];
 #endif

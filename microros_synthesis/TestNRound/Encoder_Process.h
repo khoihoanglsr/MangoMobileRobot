@@ -1,5 +1,5 @@
-#ifndef ENCODER_PROCESS_H
-#define ENCODER_PROCESS_H
+#ifndef ENCODER_XULY_H
+#define ENCODER_XULY_H
 
 #include "Global.h"
 

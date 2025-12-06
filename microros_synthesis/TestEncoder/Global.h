@@ -24,8 +24,13 @@
 #define M_LEFT  0
 #define M_RIGHT 1
 
+// LCD
+#ifndef USE_LCD_16x2
+#define USE_LCD_16x2 1   // bật LCD; đặt 0 nếu muốn build không LCD
+#endif
+
 // ===== PWM =====
-static const int PWM_BITS = 10;                 
+static const int PWM_BITS = 10;                 // 0..1023
 static const int PWM_MAX  = (1<<PWM_BITS)-1;
 extern int   PWM_FREQ_HZ;
 
