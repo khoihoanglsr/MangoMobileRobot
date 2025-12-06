@@ -10,29 +10,27 @@ AXIS_ANGULAR = 0      # Chỉ số của trục cho tốc độ xoay (thường 
 DEADMAN_BUTTON = 4    # Chỉ số của nút "kích hoạt" (thường là 4 - nút L1 hoặc LB)
 # =================================
 
-class JoyTeleopNode(Node):
+class goyTeleopNode(Node):
     def __init__(self):
         super().__init__('my_joy_teleop_node')
         
         # Tạo một subscriber lắng nghe chủ đề /joy
-        self.subscription = self.create_subscription(
-            Joy,
-            'joy',
-            self.joy_callback,
-            10)
+        self.subscription = self.create_subscription(Joy, 'joy', self.joy_callback, 10)
         
         # Tạo một publisher xuất bản lên chủ đề /cmd_vel
         self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
 
         # Khai báo các tham số cho tốc độ tối đa (tùy chọn nhưng nên làm)
         self.declare_parameter('scale_linear', 1.0)  # Tốc độ tiến/lùi tối đa (m/s)
-        self.declare_parameter('scale_angular', 1.0) # Tốc độ xoay tối đa (rad/s)
+        self.declare_parameter('scale_angular', 3.141592) # Tốc độ xoay tối đa (rad/s)
+        
+        self.declare_parameter('deadzone', 0.1)  # Vùng chết 10%
 
         self.get_logger().info("Node teleop tùy chỉnh đã khởi động!")
         self.get_logger().info(f"Giữ nút [Button {DEADMAN_BUTTON}] để di chuyển.")
 
 
-    def joy_callback(self, msg):
+    def goy_callback(self, msg):
         """
         Hàm này được gọi mỗi khi có tin nhắn mới trên chủ đề /joy
         """
@@ -40,7 +38,7 @@ class JoyTeleopNode(Node):
         scale_linear = self.get_parameter('scale_linear').value
         scale_angular = self.get_parameter('scale_angular').value
 
-        # Tạo một tin nhắn Twist mới (mặc định là 0)	
+        # Tạo một tin nhắn Twist mới (mặc định là 0)
         twist_msg = Twist()
 
         # Kiểm tra xem nút "kích hoạt" có đang được giữ không

@@ -47,13 +47,15 @@ Lưu ý: Hãy để terminal này chạy. Nếu nó kết nối thành công, b�
 ### Terminal 2: Khởi chạy Trình điều khiển Joystick
 Terminal này đọc tín hiệu thô từ tay cầm.
 
-0.
+1. Kiểm tra xem joystick đã kết nối chưa
 > ls /dev/input/js*
 
-1. Cấp quyền cho joystick: Lệnh này chỉ cần chạy một lần sau khi cắm tay cầm.
+Nếu xuất hiện /dev/input/js0 hoặc tương tự thì là đã kết nối thành công
+
+2. Cấp quyền cho joystick: Lệnh này chỉ cần chạy một lần sau khi cắm tay cầm.
 > sudo chmod a+r /dev/input/js0
 
-2. Chạy node joy_linux:
+3. Chạy node joy_linux:
 > ros2 run joy_linux joy_linux_node
 
 Lưu ý: Hãy để terminal này chạy. Nó đang liên tục phát (publish) dữ liệu tay cầm lên topic /joy.
@@ -72,15 +74,19 @@ Terminal này chạy code my_joy_teleop để chuyển đổi topic /joy thành 
 Lưu ý: Hãy để terminal này chạy. Đây là bộ não chuyển đổi lệnh điều khiển.
 
 ### Terminal 4: Kiểm tra (Debug)
-Terminal này dùng để nghe topic /cmd_vel và xác nhận rằng mọi thứ đang hoạt động.
+Terminal này dùng để nghe topic /cmd_vel và /odom/unfiltered xác nhận rằng mọi thứ đang hoạt động.
 
 1. Source workspace:
 Đảm bảo ở đúng thư mục workspace
 > cd ~/workspace/MangoMobileRobot 
 > source install/setup.bash
 
-2. Chạy topic echo:
+2. Echo /cmd_vel:
 > ros2 topic echo /cmd_vel
 
+3. Mở bảng quan sát trực tiếp odometry
+ros2 run rqt_gui rqt_gui
+
 Bây giờ, hãy giữ nút an toàn (deadman button) trên tay cầm và di chuyển cần analog. Nếu mọi thứ thành công, bạn sẽ thấy các giá trị linear.x và angular.z xuất hiện trong terminal này.
+
 

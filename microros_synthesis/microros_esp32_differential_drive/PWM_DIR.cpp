@@ -24,8 +24,6 @@ void setPWM_8bit_mag(int i, uint8_t mag8) {
   // Map 8-bit -> độ phân giải PWM_MAX (ví dụ 10-bit = 1023)
   uint32_t duty = (uint32_t)mag8 * PWM_MAX / 255U;
   analogWrite(pwmPinOf(i), duty);
-
-  // ⚠️ Không cập nhật outCmd[] ở đây để giữ nguyên dấu và thang 8-bit có dấu.
 }
 
 // ===================== DỪNG KHẨN ===================== //
@@ -33,9 +31,8 @@ void stopHard() {
   setPWM_8bit_mag(0, 0);
   setPWM_8bit_mag(1, 0);
   
-  // Giữ telemetry thống nhất (8-bit có dấu)
-  outCmd[0] = 0;
-  outCmd[1] = 0;
+  sp_rpm[M_LEFT] = 0.0f;
+  sp_rpm[M_RIGHT] = 0.0f;
 }
 
 // ===================== HÀM CHÍNH: ÁP LỆNH RA MOTOR ===================== //
@@ -48,8 +45,7 @@ void applyDutyFromCmd_modeaware(int i, int cmd) {
   int dz  = (controlMode == MODE_PULSE) ? CMD_DEAD : CMD_DEAD_PID;
   int mag = abs(cmd);
   if (mag <= dz) mag = 0;
-
-  // ---- Deadzone chiều quay (tránh đảo chiều liên tục quanh 0) ----
+ 
   bool fwd;
   if (mag == 0) {
     // Giữ nguyên chiều cũ khi lệnh nhỏ
