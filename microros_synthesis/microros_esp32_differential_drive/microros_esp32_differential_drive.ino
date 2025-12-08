@@ -18,6 +18,8 @@
 #include <geometry_msgs/msg/twist.h>
 #include <nav_msgs/msg/odometry.h>
 #include <rmw/qos_profiles.h>
+#include <std_msgs/msg/int32_multi_array.h>
+
 
 // ---- Math / Odom ----
 #include <math.h>
@@ -88,12 +90,22 @@ rcl_publisher_t odom_pub;
 nav_msgs__msg__Odometry odom_msg;
 
 rcl_timer_t odom_timer;
-// rcl_timer_t ctrl_timer;
+
+rcl_publisher_t enc_pub;
+std_msgs__msg__Int32MultiArray enc_msg;
 
 // ===================== ODOM helper ===================
 Odometry odom;
 unsigned long prev_odom_ms = 0;
 unsigned long long time_offset_ms = 0;
+
+// -------- Manual odometry state (meters / radians) --------
+static float odom_x = 0.0f;
+static float odom_y = 0.0f;
+static float odom_yaw = 0.0f;
+
+static long last_enc_L = 0;
+static long last_enc_R = 0;
 
 // ===================== Slew state / output =====================
 static float slew_L = 0.0f;
@@ -301,14 +313,16 @@ static void run_control_step() {
 
   // ===== RIGHT WHEEL: FOLLOWER =====
 
-  const float RATIO_MAX = 1.0f;     
-  const float RATIO_MIN = -1.0f;      
+  const float RATIO_MAX = 2.0f;     
+  const float RATIO_MIN = -2.0f;\
+  const float RATIO_DEN_MIN = 5.0f;       
 
-  float ratio_new = sp_rpm_cmd_R / sp_rpm_cmd_L;
-
-  // Giới hạn ratio để tránh nhảy điên
-  if (ratio_new > RATIO_MAX) ratio_new = RATIO_MAX;
-  if (ratio_new < RATIO_MIN) ratio_new = RATIO_MIN;
+  float ratio_new = sp_rpm_cmd_L / sp_rpm_cmd_R;
+  if (fabsf(sp_rpm_cmd_L) > RATIO_DEN_MIN) {
+    // Giới hạn ratio để tránh nhảy điên
+    if (ratio_new > RATIO_MAX) ratio_new = RATIO_MAX;
+    if (ratio_new < RATIO_MIN) ratio_new = RATIO_MIN;
+  }
 
   ratio_prev = ratio_new;
 
@@ -318,11 +332,31 @@ static void run_control_step() {
   if (u_R > UMAX) u_R = UMAX;
   if (u_R < UMIN) u_R = UMIN;
 
+  // ----- VÙNG DỪNG MỀM -----
+const float STOP_SP_THRESH = 5.0f;   // rpm
+
+  if (fabsf(sp_rpm_cmd_L) < STOP_SP_THRESH &&
+      fabsf(sp_rpm_cmd_R) < STOP_SP_THRESH) {
+
+    // Nếu đã gần dừng, coi như dừng hẳn: bỏ FF + reset I
+    integ_L = 0.0f;
+    integ_R = 0.0f;
+
+    u_L = 0.0f;
+    u_R = 0.0f;
+  }
+
   // 4) Kết nối dữ liệu ra
   out_pwm_L = u_L;
   out_pwm_R = u_R;
 
+  // ---- Publish encoder counts ----
+  enc_msg.data.data[0] = encCountLeft;
+  enc_msg.data.data[1] = encCountRight;
+  RCSOFTCHECK(rcl_publish(&enc_pub, &enc_msg, NULL));
+
   apply_pwm_modeaware();
+
 }
 
 // ===================== APPLY PWM WITH SLEW RATE =====================
@@ -361,27 +395,82 @@ static void apply_pwm_modeaware() {
 }
 
 // ===================== ODOM TIMER CALLBACK =====================
-static void odom_timer_cb(rcl_timer_t *, int64_t) {
-  unsigned long now_ms = millis();
-  float dt = (prev_odom_ms == 0) ? 0.02f : (now_ms - prev_odom_ms) / 1000.0f;
-  prev_odom_ms = now_ms;
+static void odom_timer_cb(rcl_timer_t *, int64_t)
+{
+    unsigned long now_ms = millis();
+    static unsigned long prev_ms = now_ms;
 
-  // RPM → m/s, rad/s
-  float rpsL = meas_rpm_out[0] / 60.0f;
-  float rpsR = meas_rpm_out[1] / 60.0f;
+    float dt = (now_ms - prev_ms) / 1000.0f;
+    if (dt <= 0.0f) dt = 1e-3f;
+    prev_ms = now_ms;
 
-  float lin_x = ((rpsL + rpsR) * 0.5f) * TWO_PI_R;  // m/s
-  float ang_z = ((-rpsL + rpsR) * 0.5f) * TWO_PI_R / (BASE_WIDTH_M * 0.5f);  // rad/s
+    // --- Read current encoder values (absolute counts) ---
+    long currL = encCountLeft;
+    long currR = encCountRight;
 
-  odom.update(dt, lin_x, 0.0f, ang_z);
+    // --- Raw (always positive) delta counts ---
+    long dL_raw = currL - last_enc_L;
+    long dR_raw = currR - last_enc_R;
 
-  // Publish nav_msgs/Odometry
-  odom_msg = odom.getData();
-  struct timespec ts = toRosNow();
-  odom_msg.header.stamp.sec = ts.tv_sec;
-  odom_msg.header.stamp.nanosec = ts.tv_nsec;
-  RCSOFTCHECK(rcl_publish(&odom_pub, &odom_msg, NULL));
+    last_enc_L = currL;
+    last_enc_R = currR;
+
+    // --- Lấy dấu từ setpoint rpm (hoặc có thể dùng meas_rpm_out) ---
+    float signL = (sp_rpm_cmd_L >= 0.0f) ? +1.0f : -1.0f;
+    float signR = (sp_rpm_cmd_R >= 0.0f) ? +1.0f : -1.0f;
+
+    // Nếu gần như dừng thì không cộng thêm nữa
+    const float STOP_SP_THRESH = 5.0f; // rpm
+    if (fabsf(sp_rpm_cmd_L) < STOP_SP_THRESH) signL = 0.0f;
+    if (fabsf(sp_rpm_cmd_R) < STOP_SP_THRESH) signR = 0.0f;
+
+    // --- Signed delta counts ---
+    float dL = signL * (float)dL_raw;
+    float dR = signR * (float)dR_raw;
+
+    // --- Convert delta counts → distance for each wheel (m) ---
+    float distL = dL / COUNTS_PER_REV * TWO_PI_R;
+    float distR = dR / COUNTS_PER_REV * TWO_PI_R;
+
+    // --- Differential-drive kinematics ---
+    float dist = 0.5f * (distL + distR);                    // forward distance
+    float dYaw = (distR - distL) / BASE_WIDTH_M;            // rad change
+
+    // --- Integrate pose ---
+    float yaw_mid = odom_yaw + 0.5f * dYaw;
+    odom_x += dist * cosf(yaw_mid);
+    odom_y += dist * sinf(yaw_mid);
+    odom_yaw += dYaw;
+
+    // Normalize yaw into [-π, π]
+    if (odom_yaw > M_PI) odom_yaw -= 2 * M_PI;
+    if (odom_yaw < -M_PI) odom_yaw += 2 * M_PI;
+
+    // -------- Fill odom_msg --------
+    struct timespec ts = toRosNow();
+    odom_msg.header.stamp.sec = ts.tv_sec;
+    odom_msg.header.stamp.nanosec = ts.tv_nsec;
+
+    odom_msg.pose.pose.position.x = odom_x;
+    odom_msg.pose.pose.position.y = odom_y;
+    odom_msg.pose.pose.position.z = 0.0f;
+
+    // Yaw → quaternion
+    float cy = cosf(odom_yaw * 0.5f);
+    float sy = sinf(odom_yaw * 0.5f);
+    odom_msg.pose.pose.orientation.x = 0.0;
+    odom_msg.pose.pose.orientation.y = 0.0;
+    odom_msg.pose.pose.orientation.z = sy;
+    odom_msg.pose.pose.orientation.w = cy;
+
+    // Velocities (optional)
+    odom_msg.twist.twist.linear.x  = dist / dt;
+    odom_msg.twist.twist.angular.z = dYaw / dt;
+
+    // Publish
+    RCSOFTCHECK(rcl_publish(&odom_pub, &odom_msg, NULL));
 }
+
 
 // ===== ENCODER / PCNT =====
 
@@ -485,6 +574,19 @@ void setup() {
     "odom/unfiltered")
   );
 
+  // Publisher: /encRead  (encoder raw counts)
+  RCCHECK(rclc_publisher_init_default(
+    &enc_pub,
+    &node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32MultiArray),
+    "encRead"
+  ));
+
+  enc_msg.data.capacity = 2;
+  enc_msg.data.size = 2;
+  enc_msg.data.data = (int32_t*) malloc(sizeof(int32_t) * 2);
+
+
   // 1. Initial 2 timers
   const unsigned long odom_period_ms = 40; // 25Hz 
   // const unsigned long ctrl_period_ms = 20; // 50Hz
@@ -567,8 +669,8 @@ void loop() {
 
   // --- 3. SAFETY MECHANISM ---
   if (millis() - last_cmdvel_ms > 200) {
-    sp_rpm_cmd_L = 0.0f;
-    sp_rpm_cmd_R = 0.0f;
+    sp_rpm[M_LEFT]  = 0.0f;
+    sp_rpm[M_RIGHT] = 0.0f;
 
     sp_rpm_cmd_L = 0.0f;
     sp_rpm_cmd_R = 0.0f;

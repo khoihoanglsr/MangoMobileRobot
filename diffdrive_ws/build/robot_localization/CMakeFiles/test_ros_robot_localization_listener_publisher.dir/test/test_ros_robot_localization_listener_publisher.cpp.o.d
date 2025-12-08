@@ -825,9 +825,10 @@ CMakeFiles/test_ros_robot_localization_listener_publisher.dir/test/test_ros_robo
  /opt/ros/jazzy/include/tf2/tf2/LinearMath/Matrix3x3.hpp \
  /opt/ros/jazzy/include/tf2/tf2/LinearMath/Quaternion.hpp \
  /opt/ros/jazzy/include/tf2/tf2/LinearMath/Vector3.hpp \
- /opt/ros/jazzy/include/tf2_ros/tf2_ros/buffer_interface.h \
- /opt/ros/jazzy/include/tf2_ros/tf2_ros/visibility_control.h \
+ /opt/ros/jazzy/include/tf2_ros/tf2_ros/buffer_interface.hpp \
+ /opt/ros/jazzy/include/tf2_ros/tf2_ros/visibility_control.hpp \
  /opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.h \
+ /opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp \
  /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/msg/tf_message.hpp \
  /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__struct.hpp \
  /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__builder.hpp \

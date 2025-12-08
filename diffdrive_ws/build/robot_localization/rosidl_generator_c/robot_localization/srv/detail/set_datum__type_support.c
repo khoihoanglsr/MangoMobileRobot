@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
-#include "robot_localization/srv/detail/set_datum__functions.h"
 #include "robot_localization/srv/detail/set_datum__type_support.h"
 #include "robot_localization/srv/detail/set_datum__struct.h"
+#include "robot_localization/srv/detail/set_datum__functions.h"
 
 #ifdef __cplusplus
 extern "C"

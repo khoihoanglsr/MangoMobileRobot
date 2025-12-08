@@ -1,7 +1,7 @@
 #ifndef PWM_DIR_H
 #define PWM_DIR_H
 
-#include "Tien_ich.h"
+#include "Global.h"
 
 /*
   ================== MÔ TẢ CHUNG ==================

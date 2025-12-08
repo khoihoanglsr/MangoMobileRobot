@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "robot_localization/srv/detail/set_utm_zone__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "robot_localization/srv/detail/set_utm_zone__type_support.h"
-#include "robot_localization/srv/detail/set_utm_zone__struct.h"
 #include "robot_localization/srv/detail/set_utm_zone__functions.h"
 
 #ifdef __cplusplus

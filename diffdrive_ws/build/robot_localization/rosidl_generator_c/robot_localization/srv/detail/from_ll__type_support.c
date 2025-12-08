@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "robot_localization/srv/detail/from_ll__type_support.h"
-#include "robot_localization/srv/detail/from_ll__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "robot_localization/srv/detail/from_ll__functions.h"
+#include "robot_localization/srv/detail/from_ll__struct.h"
 
 #ifdef __cplusplus
 extern "C"

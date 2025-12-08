@@ -60,16 +60,4 @@ void applyDutyFromCmd_modeaware(int i, int cmd) {
   // ---- Áp dụng chiều & PWM ----
   setDir(i, fwd);                        // có invert_dir[] trong setDir()
   setPWM_8bit_mag(i, (uint8_t)mag);
-
-  // ---- Ghi log để debug ----
-  if (echoCmd) {
-    Serial.print(F("[M"));
-    Serial.print(i);
-    Serial.print(F("] cmd="));
-    Serial.print(cmd);
-    Serial.print(F(" -> PWM8="));
-    Serial.print(mag);
-    Serial.print(F(" | Chieu="));
-    Serial.println((fwd ^ invert_dir[i]) ? "THUAN" : "NGHICH");
-  }
 }

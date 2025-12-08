@@ -10,19 +10,19 @@
 
 
 // ===== CHÂN (2 động cơ, DIR+PWM) =====
-// Motor 0 (trái)
-#define M0_PWM_PIN    25
-#define M0_DIR_PIN    26
-#define M0_ENC_A_PIN  34
-#define M0_ENC_B_PIN  35
-// Motor 1 (phải)
-#define M1_PWM_PIN    27
-#define M1_DIR_PIN    14
-#define M1_ENC_A_PIN  32
-#define M1_ENC_B_PIN  33
+// Motor 1 (trái)
+#define M1_PWM_PIN    25
+#define M1_DIR_PIN    26
+#define M1_ENC_A_PIN  34
+#define M1_ENC_B_PIN  35
+// Motor 0 (phải)
+#define M0_PWM_PIN    27
+#define M0_DIR_PIN    14
+#define M0_ENC_A_PIN  32
+#define M0_ENC_B_PIN  33
 
-#define M_LEFT  0
-#define M_RIGHT 1
+#define M_LEFT  1
+#define M_RIGHT 0
 
 // ===== PWM =====
 static const int PWM_BITS = 10;                 

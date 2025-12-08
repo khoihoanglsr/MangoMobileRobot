@@ -254,13 +254,11 @@ class GetState_Response(metaclass=Metaclass_GetState_Response):
         if 'state' not in kwargs:
             self.state = numpy.zeros(15, dtype=numpy.float64)
         else:
-            self.state = numpy.array(kwargs.get('state'), dtype=numpy.float64)
-            assert self.state.shape == (15, )
+            self.state = kwargs.get('state')
         if 'covariance' not in kwargs:
             self.covariance = numpy.zeros(225, dtype=numpy.float64)
         else:
-            self.covariance = numpy.array(kwargs.get('covariance'), dtype=numpy.float64)
-            assert self.covariance.shape == (225, )
+            self.covariance = kwargs.get('covariance')
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -292,9 +290,9 @@ class GetState_Response(metaclass=Metaclass_GetState_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if all(self.state != other.state):
+        if any(self.state != other.state):
             return False
-        if all(self.covariance != other.covariance):
+        if any(self.covariance != other.covariance):
             return False
         return True
 
