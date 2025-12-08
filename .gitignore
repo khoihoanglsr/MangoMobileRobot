@@ -1,7 +1,7 @@
 # Ignore only top-level colcon folders
-**/build/
-**/install/
-**/log/
+/build/
+/install/
+/log/
 
 # Also ignore colcon metadata
 /.colcon/
