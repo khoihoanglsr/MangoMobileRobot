@@ -1,0 +1,22 @@
+# Ignore only top-level colcon folders
+/build/
+/install/
+/log/
+
+# Also ignore colcon metadata
+/.colcon/
+/.colcon_metadata/
+
+# Python cache
+**/__pycache__/
+*.pyc
+
+# CMake generated files inside packages
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+
+# Test results
+**/test_results/
+

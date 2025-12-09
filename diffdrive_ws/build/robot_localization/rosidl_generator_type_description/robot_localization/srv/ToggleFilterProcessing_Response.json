@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robot_localization/srv/ToggleFilterProcessing_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "robot_localization/srv/ToggleFilterProcessing_Response",
+      "hash_string": "RIHS01_0a60a1656f114ffaf5e7a17b2d43384742b0026475a5b007fe4e333877b2edcb"
+    }
+  ]
+}
