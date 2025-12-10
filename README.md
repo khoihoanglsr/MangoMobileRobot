@@ -40,7 +40,7 @@ Bạn sẽ thấy một kết quả, ví dụ:
 2. Sao chép đường dẫn và khởi chạy agent:
 
 THAY THẾ --dev /dev/serial/by-id/... bằng đường dẫn bạn vừa tìm thấy
-> ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0
+    > ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0
 
 Lưu ý: Hãy để terminal này chạy. Nếu nó kết nối thành công, bạn sẽ thấy thông báo "Session established".
 
@@ -62,11 +62,11 @@ Lưu ý: Hãy để terminal này chạy. Nó đang liên tục phát (publish) 
 
 ### Terminal 3: Khởi chạy Node Teleop
 Terminal này chạy code my_joy_teleop để chuyển đổi topic /joy thành topic /cmd_vel.
-
+ros2 run my_joy_teleop my_teleop_node 
 1. Source workspace:
 Đảm bảo ở đúng thư mục workspace
 > cd ~/workspace/MangoMobileRobot 
-> source install/setup.bash
+> source install/setup.zsh
 
 2. Chạy node:
 > ros2 run my_joy_teleop my_teleop_node
@@ -79,7 +79,7 @@ Terminal này dùng để nghe topic /cmd_vel và /odom/unfiltered xác nhận r
 1. Source workspace:
 Đảm bảo ở đúng thư mục workspace
 > cd ~/workspace/MangoMobileRobot 
-> source install/setup.bash
+> source install/setup.zsh
 
 2. Echo /cmd_vel:
 > ros2 topic echo /cmd_vel
