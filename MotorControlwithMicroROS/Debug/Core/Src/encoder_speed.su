@@ -1,0 +1,3 @@
+../Core/Src/encoder_speed.c:15:6:EncoderSpeed_Init	8	static
+../Core/Src/encoder_speed.c:24:7:Encoder_GetPosition_m	32	static
+../Core/Src/encoder_speed.c:37:7:Encoder_GetSpeed_mps	40	static

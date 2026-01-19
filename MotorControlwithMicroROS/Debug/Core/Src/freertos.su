@@ -1,0 +1,11 @@
+../Core/Src/freertos.c:193:6:MX_FREERTOS_Init	8	static
+../Core/Src/freertos.c:263:6:StartDefaultTask	448	static
+../Core/Src/freertos.c:389:6:EncoderTask	24	static
+../Core/Src/freertos.c:417:6:MotorControlTask	24	static
+../Core/Src/freertos.c:475:6:OdometryTask	24	static
+../Core/Src/freertos.c:487:6:yaw_to_quaternion	16	static
+../Core/Src/freertos.c:495:13:microros_odom_init	16	static
+../Core/Src/freertos.c:510:13:microros_publish_odom	32	static
+../Core/Src/freertos.c:536:24:millis_void	8	static
+../Core/Src/freertos.c:542:13:cmdvel_cb	40	static
+../Core/Src/freertos.c:560:13:pid_cb	24	static
