@@ -10,6 +10,15 @@
 # Python cache
 **/__pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# ===== Virtual env =====
+venv/
+.env/
+
+# ===== UI build =====
+ui/__pycache__/
 
 # CMake generated files inside packages
 **/CMakeFiles/
