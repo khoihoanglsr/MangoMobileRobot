@@ -31,7 +31,7 @@ def main():
     # Timer để ROS spin mà không block Qt
     timer = QTimer()
     timer.timeout.connect(lambda: rclpy.spin_once(ros_node, timeout_sec=0.01))
-    timer.start(10)
+    timer.start(10) # millisecond
 
     app.exec()
 
