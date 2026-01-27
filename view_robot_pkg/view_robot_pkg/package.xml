@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>view_robot_pkg</name>
+  <version>0.0.0</version>
+  <description>View robot in RViz</description>
+  <maintainer email="you@example.com">you</maintainer>
+  <license>BSD-3-Clause</license>
+  <author>Khoa_AIot</author>  
+  <!-- Runtime deps for your node -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  
+  <!-- nhung depend can thiet  -->
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_srvs</depend>
+  <depend>roslaunch</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>robot_state_publisher_gui</depend>
+  <depend>builtin_interfaces</depend>
+  <depend>navigation2</depend>
+  <depend>nav2_bringup</depend>
+  <depend>nav2_simple_commander</depend>
+  <depend>slam_toolbox</depend>
+  <depend>std_msgs</depend>
+  <depend>tf_transformations</depend>
+  
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
