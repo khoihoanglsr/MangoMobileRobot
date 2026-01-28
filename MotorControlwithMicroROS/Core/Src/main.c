@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "dma.h"
 #include "i2c.h"
 #include "spi.h"
 #include "tim.h"
@@ -37,6 +38,11 @@
 #include "ili9341.h"
 #include "xpt2046.h"
 #include "touch_event.h"
+#include "ps2xlib.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdbool.h>
+
 //#include "usb_otg_host.h"
 /* USER CODE END Includes */
 
@@ -67,6 +73,7 @@ static void MPU_Config(void);
 void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 void demoLCD(int i);
+void locLCD(void);
 unsigned long testFillScreen();
 unsigned long testText();
 unsigned long testLines(uint16_t color);
@@ -119,14 +126,15 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_I2C1_Init();
   MX_USART3_UART_Init();
   MX_TIM3_Init();
-  MX_TIM5_Init();
   MX_TIM9_Init();
   MX_FMC_Init();
   MX_SPI1_Init();
-  MX_USART2_UART_Init();
+  MX_SPI2_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
   //HAL_NVIC_DisableIRQ(TIM6_DAC_IRQn);  //tam dung ngat timer 6 de setup
   //MX_USB_OTG_FS_HCD_Init();
@@ -177,7 +185,9 @@ int main(void)
   int i = 1;
   for (i=0;i<=0;i++)
   {
-	  demoLCD(i);
+	  //demoLCD(i);
+	  locLCD();
+
   }
 
 //  const char test_msg[] = "USART2 VCP OK\r\n";
@@ -408,6 +418,188 @@ void demoLCD(int i)
 	HAL_Delay(2000);
 }
 
+typedef struct { uint16_t x,y,w,h; } Rect_t;
+
+static Rect_t g_val_pwm1, g_val_pwm2, g_val_enc1, g_val_enc2;
+static Rect_t g_val_v1, g_val_v2;
+static Rect_t g_val_x, g_val_y, g_val_yaw;
+
+static uint16_t g_charW = 8, g_fontH = 12, g_pad = 6;
+
+void locLCD(void)
+{
+    lcdSetOrientation(LCD_ORIENTATION_LANDSCAPE);
+    lcdFillRGB(COLOR_BLACK);
+    lcdSetTextFont(&Font12);
+
+    uint16_t W = lcdGetWidth();
+    uint16_t H = lcdGetHeight();
+
+    uint16_t fontH = lcdGetTextFont()->Height;
+    uint16_t charW = lcdGetTextFont()->Width;   // nếu lỗi -> đổi thành 8
+
+    // ===== Grid =====
+    uint16_t M  = 6;
+    uint16_t GX = M;
+    uint16_t GY = 22;
+    uint16_t GW = W - 2*M;
+    uint16_t GH = H - GY - M;
+
+    uint16_t CW = GW / 3;
+    uint16_t RH = GH / 4;
+    uint16_t P  = 6;
+    g_fontH = fontH;
+    g_charW = (charW == 0) ? 8 : charW;
+    g_pad   = P;
+
+    #define STORE_VALUE_RECT(_rect, cx, cy, cw, ch) do {                          \
+        int16_t _y0 = (int16_t)(cy) + (int16_t)(((ch) - 2*(int16_t)fontH)/2);     \
+        if (_y0 < (int16_t)(cy)+P) _y0 = (int16_t)(cy)+P;                         \
+        (_rect).x = (uint16_t)((cx) + 1);                                         \
+        (_rect).y = (uint16_t)(_y0 + (int16_t)fontH);                             \
+        (_rect).w = (uint16_t)((cw) - 2);                                         \
+        (_rect).h = (uint16_t)(fontH);                                            \
+    } while(0)
+    // ===== Header =====
+    lcdSetTextColor(COLOR_YELLOW, COLOR_BLACK);
+    lcdSetCursor(M, 4);
+    lcdPrintf("Robomango Zackon");
+
+    // ===== Draw grid =====
+    lcdSetTextColor(COLOR_WHITE, COLOR_BLACK);
+    lcdDrawRect(GX, GY, GW, GH, COLOR_WHITE);
+    lcdDrawVLine(GX + CW,   GY, GY + GH, COLOR_WHITE);
+    lcdDrawVLine(GX + 2*CW, GY, GY + GH, COLOR_WHITE);
+    for (int r = 1; r < 4; r++)
+        lcdDrawHLine(GX, GX + GW, GY + r*RH, COLOR_WHITE);
+
+    #define CELL_X(c) (GX + (c)*CW)
+    #define CELL_Y(r) (GY + (r)*RH)
+    #define MAX_CHARS(_w)  ((int)(((_w) - 2*P) / charW))
+
+    // ===== In 2 dòng, CẢ 2 dòng đều căn giữa + clip không tràn =====
+    #define PRINT_2LINES_CENTER(cx,cy,cw,ch,l1,l2,color,bg) do {           \
+        int m = MAX_CHARS(cw); if (m < 1) m = 1;                           \
+        int len1 = (int)strlen(l1); if (len1 > m) len1 = m;                \
+        int len2 = (int)strlen(l2); if (len2 > m) len2 = m;                \
+        int w1 = len1 * (int)charW;                                        \
+        int w2 = len2 * (int)charW;                                        \
+        int wMax = (w1 > w2) ? w1 : w2;                                    \
+        int16_t x = (int16_t)(cx) + (int16_t)((cw) - wMax)/2;              \
+        int16_t y = (int16_t)(cy) + (int16_t)((ch) - 2*(int16_t)fontH)/2;  \
+        if (x < (int16_t)(cx)+P) x = (int16_t)(cx)+P;                      \
+        if (y < (int16_t)(cy)+P) y = (int16_t)(cy)+P;                      \
+        lcdSetTextColor(color, bg);                                        \
+        lcdSetCursor((unsigned short)x, (unsigned short)y);                \
+        lcdPrintf("%.*s", len1, l1);                                       \
+        lcdSetCursor((unsigned short)x, (unsigned short)(y + fontH));      \
+        lcdPrintf("%.*s", len2, l2);                                       \
+    } while(0)
+
+    // ===== Button: 1 dòng căn giữa + clip =====
+    #define PRINT_CENTER_1LINE(cx,cy,cw,ch,text,color,bg) do {             \
+        int m = MAX_CHARS(cw); if (m < 1) m = 1;                           \
+        int len = (int)strlen(text); if (len > m) len = m;                 \
+        int16_t x = (int16_t)(cx) + (int16_t)((cw) - len*(int)charW)/2;    \
+        int16_t y = (int16_t)(cy) + (int16_t)((ch) - (int16_t)fontH)/2 + 1;\
+        if (x < (int16_t)(cx)+P) x = (int16_t)(cx)+P;                      \
+        if (y < (int16_t)(cy)+P) y = (int16_t)(cy)+P;                      \
+        lcdSetTextColor(color, bg);                                        \
+        lcdSetCursor((unsigned short)x, (unsigned short)y);                \
+        lcdPrintf("%.*s", len, text);                                      \
+    } while(0)
+
+    // ===== Cột 1 (tất cả CENTER) =====
+    PRINT_2LINES_CENTER(CELL_X(0), CELL_Y(0), CW, RH, "PWM1", "0.0",  COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_pwm1, CELL_X(0), CELL_Y(0), CW, RH);
+
+    PRINT_2LINES_CENTER(CELL_X(0), CELL_Y(1), CW, RH, "PWM2", "0.0",  COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_pwm2, CELL_X(0), CELL_Y(1), CW, RH);
+
+    PRINT_2LINES_CENTER(CELL_X(0), CELL_Y(2), CW, RH, "Enc1", "0.0", COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_enc1, CELL_X(0), CELL_Y(2), CW, RH);
+
+    PRINT_2LINES_CENTER(CELL_X(0), CELL_Y(3), CW, RH, "Enc2", "0.0", COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_enc2, CELL_X(0), CELL_Y(3), CW, RH);
+
+
+    // ===== Cột 2 =====
+    PRINT_2LINES_CENTER(CELL_X(1), CELL_Y(0), CW, RH, "V1", "0.0", COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_v1, CELL_X(1), CELL_Y(0), CW, RH);
+
+    PRINT_2LINES_CENTER(CELL_X(1), CELL_Y(1), CW, RH, "V2", "0.0", COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_v2, CELL_X(1), CELL_Y(1), CW, RH);
+
+
+    // Button Figure
+    {
+        uint16_t bx = CELL_X(1)+4, by = CELL_Y(2)+4;
+        uint16_t bw = CW-8, bh = RH-8;
+        lcdFillRect(bx, by, bw, bh, COLOR_DARKGREY);
+        lcdDrawRect(bx, by, bw, bh, COLOR_WHITE);
+        PRINT_CENTER_1LINE(bx, by, bw, bh, "Figure", COLOR_DARKGREY, COLOR_DARKGREY);
+    }
+
+    // Button Controller
+    {
+        uint16_t bx = CELL_X(1)+4, by = CELL_Y(3)+4;
+        uint16_t bw = CW-8, bh = RH-8;
+        lcdFillRect(bx, by, bw, bh, COLOR_DARKGREY);
+        lcdDrawRect(bx, by, bw, bh, COLOR_WHITE);
+        PRINT_CENTER_1LINE(bx, by, bw, bh, "Controller", COLOR_WHITE, COLOR_DARKGREY);
+    }
+
+    // ===== Cột 3 =====
+    PRINT_2LINES_CENTER(CELL_X(2), CELL_Y(0), CW, RH, "Odom X", "0.0", COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_x, CELL_X(2), CELL_Y(0), CW, RH);
+
+    PRINT_2LINES_CENTER(CELL_X(2), CELL_Y(1), CW, RH, "Odom Y", "0.0", COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_y, CELL_X(2), CELL_Y(1), CW, RH);
+
+    PRINT_2LINES_CENTER(CELL_X(2), CELL_Y(2), CW, RH, "Yaw",   "0.0", COLOR_CYAN, COLOR_BLACK);
+    STORE_VALUE_RECT(g_val_yaw, CELL_X(2), CELL_Y(2), CW, RH);
+
+
+    // Button Setting PID
+    {
+        uint16_t bx = CELL_X(2)+4, by = CELL_Y(3)+4;
+        uint16_t bw = CW-8, bh = RH-8;
+        lcdFillRect(bx, by, bw, bh, COLOR_DARKGREY);
+        lcdDrawRect(bx, by, bw, bh, COLOR_WHITE);
+        PRINT_CENTER_1LINE(bx, by, bw, bh, "Setting PID", COLOR_WHITE, COLOR_DARKGREY);
+    }
+
+    #undef PRINT_CENTER_1LINE
+    #undef PRINT_2LINES_CENTER
+    #undef MAX_CHARS
+    #undef CELL_X
+    #undef CELL_Y
+	#undef STORE_VALUE_RECT
+
+}
+
+static void drawValueInRect(const Rect_t* r, const char* val, uint16_t color, uint16_t bg)
+{
+    // clear đúng 1 dòng value
+    lcdFillRect(r->x, r->y, r->w, r->h, bg);
+
+    int maxChars = (int)((r->w - 2*g_pad) / g_charW);
+    if (maxChars < 1) maxChars = 1;
+
+    int len = (int)strlen(val);
+    if (len > maxChars) len = maxChars;
+
+    int16_t x = (int16_t)r->x + (int16_t)((r->w - len*(int)g_charW)/2);
+    int16_t y = (int16_t)r->y;
+
+    lcdSetTextColor(color, bg);
+    lcdSetCursor((unsigned short)x, (unsigned short)y);
+    lcdPrintf("%.*s", len, val);
+}
+
+
+
+
 unsigned long testFillScreen()
 {
 	unsigned long start = HAL_GetTick(), t = 0;
@@ -447,36 +639,36 @@ unsigned long testFillScreen()
 	return t += HAL_GetTick() - start;
 }
 
-unsigned long testText()
-{
-	lcdFillRGB(COLOR_BLACK);
-	unsigned long start = HAL_GetTick();
-	lcdSetCursor(0, 0);
-	lcdSetTextColor(COLOR_WHITE, COLOR_BLACK);
-	lcdSetTextFont(&Font8);
-	lcdPrintf("Hello World!\r\n");
-	lcdSetTextColor(COLOR_YELLOW, COLOR_BLACK);
-	lcdSetTextFont(&Font12);
-	lcdPrintf("%i\r\n", 1234567890);
-	lcdSetTextColor(COLOR_RED, COLOR_BLACK);
-	lcdSetTextFont(&Font16);
-	lcdPrintf("%#X\r\n", 0xDEADBEEF);
-	lcdPrintf("\r\n");
-	lcdSetTextColor(COLOR_GREEN, COLOR_BLACK);
-	lcdSetTextFont(&Font20);
-	lcdPrintf("Groop\r\n");
-	lcdSetTextFont(&Font12);
-	lcdPrintf("I implore thee,\r\n");
-	lcdSetTextFont(&Font12);
-	lcdPrintf("my foonting turlingdromes.\r\n");
-	lcdPrintf("And hooptiously drangle me\r\n");
-	lcdPrintf("with crinkly bindlewurdles,\r\n");
-	lcdPrintf("Or I will rend thee\r\n");
-	lcdPrintf("in the gobberwarts\r\n");
-	lcdPrintf("with my blurglecruncheon,\r\n");
-	lcdPrintf("see if I don't!\r\n");
-	return HAL_GetTick() - start;
-}
+	unsigned long testText()
+	{
+		lcdFillRGB(COLOR_BLACK);
+		unsigned long start = HAL_GetTick();
+		lcdSetCursor(0, 0);
+		lcdSetTextColor(COLOR_WHITE, COLOR_BLACK);
+		lcdSetTextFont(&Font8);
+		lcdPrintf("Hello World!\r\n");
+		lcdSetTextColor(COLOR_YELLOW, COLOR_BLACK);
+		lcdSetTextFont(&Font12);
+		lcdPrintf("%i\r\n", 1234567890);
+		lcdSetTextColor(COLOR_RED, COLOR_BLACK);
+		lcdSetTextFont(&Font12);
+		lcdPrintf("%#X\r\n", 0xDEADBEEF);
+		lcdPrintf("\r\n");
+		lcdSetTextColor(COLOR_GREEN, COLOR_BLACK);
+		lcdSetTextFont(&Font20);
+		lcdPrintf("Groop\r\n");
+		lcdSetTextFont(&Font12);
+		lcdPrintf("I implore thee,\r\n");
+		lcdSetTextFont(&Font12);
+		lcdPrintf("my foonting turlingdromes.\r\n");
+		lcdPrintf("And hooptiously drangle me\r\n");
+		lcdPrintf("with crinkly bindlewurdles,\r\n");
+		lcdPrintf("Or I will rend thee\r\n");
+		lcdPrintf("in the gobberwarts\r\n");
+		lcdPrintf("with my blurglecruncheon,\r\n");
+		lcdPrintf("see if I don't!\r\n");
+		return HAL_GetTick() - start;
+	}
 
 unsigned long testLines(uint16_t color)
 {
@@ -725,6 +917,7 @@ unsigned long testDrawImage()
 	return HAL_GetTick() - start;
 }
 /* USER CODE END 4 */
+
 
 /**
   * @brief  Period elapsed callback in non blocking mode

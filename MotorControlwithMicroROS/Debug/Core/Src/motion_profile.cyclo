@@ -1,0 +1,5 @@
+../Core/Src/motion_profile.c:4:21:clampf	3
+../Core/Src/motion_profile.c:10:21:signf_nonzero	2
+../Core/Src/motion_profile.c:14:6:MP_Init	2
+../Core/Src/motion_profile.c:20:13:MP_StepVelocity	9
+../Core/Src/motion_profile.c:68:13:MP_StepPosition	15

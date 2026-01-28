@@ -26,11 +26,27 @@
 #define UART_PERIOD_MS 50
 #define DT_TIME 0.005f
 
+//maximum speed and acceleration of each wheel
+#define MAXSPEED 0.40f
+#define V_MAX               0.40f     // max linear m/s  -- set this one similar to MAXSPEED
+#define V_STEP              0.40f     // d-pad speed
+
+#define MAXACC 1.50f
+//ps2 controller constants
+#define W_MAX               1.50f     // max angular rad/s (tune)
+#define W_STEP              1.50f     // d-pad turn rate
+
+#define PS2_TIMEOUT_MS      500
+#define STICK_DEADBAND      12        // raw units (0..255), tune ~10-20
+
+//PID controller variables
 extern PID_TypeDef PosPID1, PosPID2;
 extern PID_TypeDef SpeedPID1, SpeedPID2;
 
 extern double CurPos1, CurSpeed1, PosPIDOut1, SpeedPIDOut1, DesiredPos1, DesiredSpeed1;
 extern double CurPos2, CurSpeed2, PosPIDOut2, SpeedPIDOut2, DesiredPos2, DesiredSpeed2;
+
+extern volatile double SetPos1, SetPos2, SetSpeed1, SetSpeed2;
 
 extern double Kp1, Ki1, Kd1;
 extern double Kp2, Ki2, Kd2;

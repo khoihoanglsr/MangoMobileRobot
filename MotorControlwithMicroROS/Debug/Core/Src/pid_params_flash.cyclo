@@ -1,0 +1,8 @@
+../Core/Src/pid_params_flash.c:30:17:crc32_sw	3
+../Core/Src/pid_params_flash.c:46:13:record_is_valid	3
+../Core/Src/pid_params_flash.c:55:27:find_latest_record	6
+../Core/Src/pid_params_flash.c:76:17:find_next_write_addr	3
+../Core/Src/pid_params_flash.c:89:13:flash_erase_sector	1
+../Core/Src/pid_params_flash.c:103:13:flash_program_record	4
+../Core/Src/pid_params_flash.c:123:6:PIDFlash_Load	3
+../Core/Src/pid_params_flash.c:134:6:PIDFlash_Save	5

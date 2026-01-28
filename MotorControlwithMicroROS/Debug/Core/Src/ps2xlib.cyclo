@@ -1,0 +1,13 @@
+../Core/Src/ps2xlib.c:8:20:PS2_Select	1
+../Core/Src/ps2xlib.c:9:20:PS2_Deselect	1
+../Core/Src/ps2xlib.c:12:13:delay_us	5
+../Core/Src/ps2xlib.c:38:13:ps2_transfer	5
+../Core/Src/ps2xlib.c:70:13:ps2_signature_ok	2
+../Core/Src/ps2xlib.c:76:6:PS2X_Init	2
+../Core/Src/ps2xlib.c:101:13:ps2_enter_config	2
+../Core/Src/ps2xlib.c:110:13:ps2_set_analog	3
+../Core/Src/ps2xlib.c:121:13:ps2_enable_rumble	2
+../Core/Src/ps2xlib.c:130:13:ps2_exit_config	2
+../Core/Src/ps2xlib.c:139:13:ps2_poll	5
+../Core/Src/ps2xlib.c:177:6:PS2X_ConfigGamepad	16
+../Core/Src/ps2xlib.c:241:6:PS2X_ReadGamepad	2

@@ -46,15 +46,17 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../Core/Inc/usart.h ../Core/Inc/main.h ../Core/Inc/robot_params.h \
  ../Core/Inc/pid.h ../Core/Inc/encoder.h ../Core/Inc/motor.h \
- ../Core/Inc/encoder_speed.h ../Core/Inc/encoder.h ../Core/Inc/pid.h \
- ../Core/Inc/odometry.h \
+ ../Core/Inc/motion_profile.h ../Core/Inc/encoder_speed.h \
+ ../Core/Inc/encoder.h ../Core/Inc/pid.h ../Core/Inc/odometry.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Core/Inc/touch_rtos.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Core/Inc/touch_event.h ../Core/Inc/spi.h ../Core/Inc/touch_event.h \
- ../Core/Inc/xpt2046.h \
+ ../Core/Inc/xpt2046.h ../Core/Inc/ps2xlib.h ../Core/Inc/ili9341.h \
+ ../Core/Inc/colors.h ../Core/Inc/registers.h ../Core/Inc/fonts.h \
+ ../Core/Inc/image.h \
  ../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/include/rcl/rcl.h \
  ../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/include/rcl/init.h \
  ../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/include/rcl/allocator.h \
@@ -324,6 +326,7 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Core/Inc/pid.h:
 ../Core/Inc/encoder.h:
 ../Core/Inc/motor.h:
+../Core/Inc/motion_profile.h:
 ../Core/Inc/encoder_speed.h:
 ../Core/Inc/encoder.h:
 ../Core/Inc/pid.h:
@@ -337,6 +340,12 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Core/Inc/spi.h:
 ../Core/Inc/touch_event.h:
 ../Core/Inc/xpt2046.h:
+../Core/Inc/ps2xlib.h:
+../Core/Inc/ili9341.h:
+../Core/Inc/colors.h:
+../Core/Inc/registers.h:
+../Core/Inc/fonts.h:
+../Core/Inc/image.h:
 ../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/include/rcl/rcl.h:
 ../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/include/rcl/init.h:
 ../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/include/rcl/allocator.h:

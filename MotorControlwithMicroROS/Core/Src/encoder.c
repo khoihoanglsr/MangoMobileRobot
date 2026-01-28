@@ -11,7 +11,7 @@
 #define ENC2_SIGN   (+1)
 
 extern TIM_HandleTypeDef htim3;   // Encoder 1
-extern TIM_HandleTypeDef htim5;   // Encoder 2
+extern TIM_HandleTypeDef htim4;   // Encoder 2
 
 // ----- Biến mở rộng đếm encoder -----
 static int16_t prev_raw_1 = 0;
@@ -23,13 +23,13 @@ static int32_t acc_count_2 = 0;
 void Encoder_Init(void)
 {
     HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
-    HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_ALL);
+    HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
 
     __HAL_TIM_SET_COUNTER(&htim3, 0);
-    __HAL_TIM_SET_COUNTER(&htim5, 0);
+    __HAL_TIM_SET_COUNTER(&htim4, 0);
 
     prev_raw_1  = (int16_t)__HAL_TIM_GET_COUNTER(&htim3);
-    prev_raw_2  = (int16_t)__HAL_TIM_GET_COUNTER(&htim5);
+    prev_raw_2  = (int16_t)__HAL_TIM_GET_COUNTER(&htim4);
 
     acc_count_1 = 0;
     acc_count_2 = 0;
@@ -48,7 +48,7 @@ int32_t Encoder_GetCount(EncoderId id)
         acc      = &acc_count_1;
         sign     = ENC1_SIGN;
     } else {
-        htim     = &htim5;
+        htim     = &htim4;
         prev_raw = &prev_raw_2;
         acc      = &acc_count_2;
         sign     = ENC2_SIGN;
@@ -70,7 +70,7 @@ void Encoder_Reset(EncoderId id)
         prev_raw_1  = 0;
         acc_count_1 = 0;
     } else {
-        __HAL_TIM_SET_COUNTER(&htim5, 0);
+        __HAL_TIM_SET_COUNTER(&htim4, 0);
         prev_raw_2  = 0;
         acc_count_2 = 0;
     }

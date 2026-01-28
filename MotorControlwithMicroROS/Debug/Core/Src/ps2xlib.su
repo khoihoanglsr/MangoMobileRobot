@@ -1,0 +1,13 @@
+../Core/Src/ps2xlib.c:8:20:PS2_Select	8	static
+../Core/Src/ps2xlib.c:9:20:PS2_Deselect	8	static
+../Core/Src/ps2xlib.c:12:13:delay_us	32	static,ignoring_inline_asm
+../Core/Src/ps2xlib.c:38:13:ps2_transfer	40	static
+../Core/Src/ps2xlib.c:70:13:ps2_signature_ok	16	static
+../Core/Src/ps2xlib.c:76:6:PS2X_Init	24	static
+../Core/Src/ps2xlib.c:101:13:ps2_enter_config	32	static
+../Core/Src/ps2xlib.c:110:13:ps2_set_analog	40	static
+../Core/Src/ps2xlib.c:121:13:ps2_enable_rumble	32	static
+../Core/Src/ps2xlib.c:130:13:ps2_exit_config	40	static
+../Core/Src/ps2xlib.c:139:13:ps2_poll	24	static
+../Core/Src/ps2xlib.c:177:6:PS2X_ConfigGamepad	24	static
+../Core/Src/ps2xlib.c:241:6:PS2X_ReadGamepad	24	static
